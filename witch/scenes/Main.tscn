@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/main_bg.jpg" type="Texture" id=1]
-[ext_resource path="res://assets/main/main_btn_menu.png" type="Texture" id=2]
-[ext_resource path="res://assets/main/main_btn_start.png" type="Texture" id=3]
-[ext_resource path="res://assets/main/main_btn_aura.png" type="Texture" id=4]
+[ext_resource path="res://assets/main/main_btn_menu_en.png" type="Texture" id=2]
+[ext_resource path="res://assets/main/main_btn_start_en.png" type="Texture" id=3]
+[ext_resource path="res://assets/main/main_btn_aura_en.png" type="Texture" id=4]
 [ext_resource path="res://assets/main/main_btn_config.png" type="Texture" id=5]
 [ext_resource path="res://assets/main/main_btn_info.png" type="Texture" id=6]
 [ext_resource path="res://scenes/Main.gd" type="Script" id=7]
@@ -23,12 +23,15 @@ expand = true
 [node name="btn_title" type="Button" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -86.5
-margin_top = 31.0
-margin_right = 86.5
-margin_bottom = 85.0
+margin_left = -173.0
+margin_top = 73.0
+margin_right = 173.0
+margin_bottom = 178.0
 focus_mode = 0
 flat = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="TextureRect" type="TextureRect" parent="btn_title"]
 anchor_right = 1.0
@@ -40,12 +43,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -107.0
-margin_top = -143.0
-margin_right = 107.0
-margin_bottom = -51.0
+margin_left = -214.0
+margin_top = -300.0
+margin_right = 214.0
+margin_bottom = -116.0
 focus_mode = 0
 flat = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="TextureRect" type="TextureRect" parent="btn_start"]
 anchor_right = 1.0
@@ -59,12 +65,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -107.0
-margin_top = -31.0
-margin_right = 107.0
-margin_bottom = 61.0
+margin_left = -214.0
+margin_top = -68.0
+margin_right = 214.0
+margin_bottom = 116.0
 focus_mode = 0
 flat = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="TextureRect" type="TextureRect" parent="btn_aura"]
 anchor_right = 1.0
@@ -78,12 +87,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -111.5
-margin_top = 95.5
-margin_right = -32.5
-margin_bottom = 160.5
+margin_left = -207.0
+margin_top = 191.0
+margin_right = -49.0
+margin_bottom = 321.0
 focus_mode = 0
 flat = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="TextureRect" type="TextureRect" parent="btn_info"]
 anchor_right = 1.0
@@ -97,12 +109,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 32.5
-margin_top = 95.5
-margin_right = 111.5
-margin_bottom = 160.5
+margin_left = 49.0
+margin_top = 191.0
+margin_right = 207.0
+margin_bottom = 321.0
 focus_mode = 0
 flat = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="TextureRect" type="TextureRect" parent="btn_config"]
 anchor_right = 1.0
@@ -114,5 +129,4 @@ texture = ExtResource( 5 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="Transition" parent="." instance=ExtResource( 8 )]
-visible = true
 color = Color( 0.160784, 0.172549, 0.247059, 1 )
