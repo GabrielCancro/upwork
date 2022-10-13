@@ -11,7 +11,13 @@ config_version=4
 [application]
 
 config/name="Witch"
+run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=360
+window/size/height=640
 
 [physics]
 
