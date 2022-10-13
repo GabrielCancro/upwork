@@ -1,0 +1,41 @@
+There is a design and concept.
+1. https://docs.google.com/document/d/1N6Fpvpdnx-L6QWeDRhrvPiiX0eKy_jXt9tsUeVz4ZcQ/edit?usp=sharing
+2. https://docs.google.com/document/d/1M9hsFVB9ksPzqN_8UBS6P0_w7yQiThlE70qcEJuSAc8/edit?usp=sharing
+
+Misho Giorgobiani 8:25 AM
+Hi! The conditions are the same.
+The finished project should contain the following set of files and information:
+- APK file signed with the name of the application (once the APK is installed on the device, the name must be saved)
+- AAB file with a caption of the application name
+- Key for APK and AAB
+- Key information (passwords, alias)
+- Bundle ID / package name
+- Version number and build number of the app
+- Full source code or Source Code
+
+For check apk / bundle ID (package name) / keystore / framework use this: http://checkout-apk.com/
+
+Important Notes:
+- APK icon must contain two sprites attached to the task
+- APK and AAB files must work on 32-bit and 64-bit devices
+- APK should be signed for release
+- the target version of API Level (targetSdkVersion) must be higher than or equal to 31
+- APK signature versions v1 and v2 (for this Android API must be 23 or lower)
+- passwords and bundle IDs and package names must be free of "default" and "example"
+- The application must contain the following set of architectures:
+armeabi_v7a
+arm64_v8a
+x86
+x86_64
+
+All discussions can take place in this chat room. We will try to answer questions and/or check the task as soon as possible.
+
+Send the source code and all the necessary files as a google drive link. The link must be active for at least one week after the confirmation of the task.
+
+If you agree with the price, time (14 days) and task we can start.
+
+Also, please fill the form for your developed application. We need info and more exact data for further work with the application as part of the coding and publication.
+https://docs.google.com/forms/d/e/1FAIpQLSfqXC3lLe0cz4lfE6HKxiVlMDmwsKETxnOU9BmPkkwMiNsvag/viewform
+
+CheckOut APK http://checkout-apk.com/
+APK/AAB artifact verification tool
