@@ -1,1 +1,14 @@
 13/10 - 3hs - download assets and first configs
+
+- APK firmado para release (enviar key + password + alias)
+- AAB firmado para release (enviar key + password + alias)
+- Bundle ID / package name (ver que name quieren)
+- Version number and build number of the app
+- Entregar el source
+- Hacer el chequeo en http://checkout-apk.com/
+
+SIN ANDROID STUDIO
+sdkmanager --sdk_root=<android_sdk_path> "platform-tools" "build-tools;30.0.3" "platforms;android-31" "cmdline-tools;latest" "cmake;3.10.2.4988404" "ndk;21.4.7075529"
+
+el comando keytool de JDK puede usarse
+keytool -v -genkey -keystore mygame.keystore -alias mygame -keyalg RSA -validity 10000

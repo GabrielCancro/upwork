@@ -1,0 +1,160 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/settings/settings_btn_back.png" type="Texture" id=1]
+[ext_resource path="res://assets/meaning/meaning_btn_title_en.png" type="Texture" id=2]
+[ext_resource path="res://assets/main_bg.jpg" type="Texture" id=3]
+[ext_resource path="res://scenes/Meaning.gd" type="Script" id=4]
+[ext_resource path="res://assets/meaning/meaning_color_0.png" type="Texture" id=5]
+[ext_resource path="res://assets/meaning/meaning_text_0_en.png" type="Texture" id=6]
+[ext_resource path="res://assets/meaning/meaning_color_2.png" type="Texture" id=7]
+[ext_resource path="res://assets/meaning/meaning_text_3_en.png" type="Texture" id=8]
+[ext_resource path="res://assets/meaning/meaning_color_4.png" type="Texture" id=9]
+[ext_resource path="res://assets/meaning/meaning_color_5.png" type="Texture" id=10]
+[ext_resource path="res://assets/meaning/meaning_text_5_en.png" type="Texture" id=11]
+[ext_resource path="res://assets/meaning/meaning_text_2_en.png" type="Texture" id=12]
+[ext_resource path="res://assets/meaning/meaning_text_4_en.png" type="Texture" id=13]
+[ext_resource path="res://assets/meaning/meaning_color_1.png" type="Texture" id=14]
+[ext_resource path="res://assets/meaning/meaning_color_3.png" type="Texture" id=15]
+[ext_resource path="res://assets/meaning/meaning_text_1_en.png" type="Texture" id=16]
+
+[node name="Meaning" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="btn_back" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -317.5
+margin_top = 75.0
+margin_right = -210.5
+margin_bottom = 165.0
+focus_mode = 0
+icon = ExtResource( 1 )
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="btn_title" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -173.0
+margin_top = 73.0
+margin_right = 173.0
+margin_bottom = 178.0
+focus_mode = 0
+icon = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 165.0
+custom_constants/separation = 33
+alignment = 1
+
+[node name="Meaning_0" type="TextureRect" parent="VBox"]
+margin_top = 39.0
+margin_right = 720.0
+margin_bottom = 180.0
+texture = ExtResource( 5 )
+stretch_mode = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Text_image" type="TextureRect" parent="VBox/Meaning_0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+stretch_mode = 4
+
+[node name="Meaning_1" type="TextureRect" parent="VBox"]
+margin_top = 213.0
+margin_right = 720.0
+margin_bottom = 364.0
+texture = ExtResource( 14 )
+stretch_mode = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Text_image" type="TextureRect" parent="VBox/Meaning_1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 16 )
+stretch_mode = 4
+
+[node name="Meaning_2" type="TextureRect" parent="VBox"]
+margin_top = 397.0
+margin_right = 720.0
+margin_bottom = 547.0
+texture = ExtResource( 7 )
+stretch_mode = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Text_image" type="TextureRect" parent="VBox/Meaning_2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 12 )
+stretch_mode = 4
+
+[node name="Meaning_3" type="TextureRect" parent="VBox"]
+margin_top = 580.0
+margin_right = 720.0
+margin_bottom = 718.0
+texture = ExtResource( 15 )
+stretch_mode = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Text_image" type="TextureRect" parent="VBox/Meaning_3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 8 )
+stretch_mode = 4
+
+[node name="Meaning_4" type="TextureRect" parent="VBox"]
+margin_top = 751.0
+margin_right = 720.0
+margin_bottom = 891.0
+texture = ExtResource( 9 )
+stretch_mode = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Text_image" type="TextureRect" parent="VBox/Meaning_4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 13 )
+stretch_mode = 4
+
+[node name="Meaning_5" type="TextureRect" parent="VBox"]
+margin_top = 924.0
+margin_right = 720.0
+margin_bottom = 1075.0
+texture = ExtResource( 10 )
+stretch_mode = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Text_image" type="TextureRect" parent="VBox/Meaning_5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 11 )
+stretch_mode = 4

@@ -14,12 +14,16 @@ config/name="Witch"
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://global.gd"
+
 [display]
 
 window/size/width=720
 window/size/height=1280
-window/size/test_width=360
-window/size/test_height=640
+window/size/test_width=270
+window/size/test_height=480
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 

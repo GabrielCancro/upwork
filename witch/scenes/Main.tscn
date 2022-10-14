@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/main_bg.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/main/main_btn_menu_en.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://assets/main/main_btn_config.png" type="Texture" id=5]
 [ext_resource path="res://assets/main/main_btn_info.png" type="Texture" id=6]
 [ext_resource path="res://scenes/Main.gd" type="Script" id=7]
-[ext_resource path="res://nodes/Transition.tscn" type="PackedScene" id=8]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -28,15 +27,11 @@ margin_top = 73.0
 margin_right = 173.0
 margin_bottom = 178.0
 focus_mode = 0
+icon = ExtResource( 2 )
 flat = true
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="TextureRect" type="TextureRect" parent="btn_title"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 2 )
 
 [node name="btn_start" type="Button" parent="."]
 anchor_left = 0.5
@@ -48,17 +43,11 @@ margin_top = -300.0
 margin_right = 214.0
 margin_bottom = -116.0
 focus_mode = 0
+icon = ExtResource( 3 )
 flat = true
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="TextureRect" type="TextureRect" parent="btn_start"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 41.0
-margin_bottom = 38.0
-texture = ExtResource( 3 )
 
 [node name="btn_aura" type="Button" parent="."]
 anchor_left = 0.5
@@ -70,17 +59,11 @@ margin_top = -68.0
 margin_right = 214.0
 margin_bottom = 116.0
 focus_mode = 0
+icon = ExtResource( 4 )
 flat = true
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="TextureRect" type="TextureRect" parent="btn_aura"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 41.0
-margin_bottom = 38.0
-texture = ExtResource( 4 )
 
 [node name="btn_info" type="Button" parent="."]
 anchor_left = 0.5
@@ -92,17 +75,11 @@ margin_top = 191.0
 margin_right = -49.0
 margin_bottom = 321.0
 focus_mode = 0
+icon = ExtResource( 6 )
 flat = true
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="TextureRect" type="TextureRect" parent="btn_info"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = -135.0
-margin_bottom = -27.0
-texture = ExtResource( 6 )
 
 [node name="btn_config" type="Button" parent="."]
 anchor_left = 0.5
@@ -114,19 +91,8 @@ margin_top = 191.0
 margin_right = 207.0
 margin_bottom = 321.0
 focus_mode = 0
+icon = ExtResource( 5 )
 flat = true
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="TextureRect" type="TextureRect" parent="btn_config"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = -135.0
-margin_bottom = -27.0
-texture = ExtResource( 5 )
-
-[node name="Tween" type="Tween" parent="."]
-
-[node name="Transition" parent="." instance=ExtResource( 8 )]
-color = Color( 0.160784, 0.172549, 0.247059, 1 )
