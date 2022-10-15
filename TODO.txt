@@ -1,7 +1,7 @@
 13/10 - 3hs - download assets and first configs
 13/10 - 1hs (CHAVO) - export assets
 14/10 - 2hs - install and config SDK + KEYTOOLS
-15/10 - 1hs - check apk configs
+15/10 - 2hs - check apk configs + aab/jdk settings
 
 -AJUSTAR ICONO ADAPTATIVO (VER TAMAñO)
 
