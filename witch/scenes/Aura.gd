@@ -6,3 +6,4 @@ func _ready():
 
 func onClick(button):
 	if button==$btn_back: Global.goto_scene("Main")
+	Global.btn_click_effect(button)

@@ -19,6 +19,7 @@ func onClick(button):
 	if button==$btn_language: 
 		if Global.options.language=="en": Global.options.language = "ru"
 		else: Global.options.language = "en"
+	Global.btn_click_effect(button)
 	update_icons()
 
 func update_icons():

@@ -1,4 +1,7 @@
 13/10 - 3hs - download assets and first configs
+13/10 - 1hs (CHAVO) - export assets
+14/10 - 2hs - install and config SDK + KEYTOOLS
+15/10 - 1hs - check apk configs
 
 - APK firmado para release (enviar key + password + alias)
 - AAB firmado para release (enviar key + password + alias)
@@ -11,4 +14,5 @@ SIN ANDROID STUDIO
 sdkmanager --sdk_root=<android_sdk_path> "platform-tools" "build-tools;30.0.3" "platforms;android-31" "cmdline-tools;latest" "cmake;3.10.2.4988404" "ndk;21.4.7075529"
 
 el comando keytool de JDK puede usarse
-keytool -v -genkey -keystore mygame.keystore -alias mygame -keyalg RSA -validity 10000
+keytool -v -genkey -keystore witch6fortune.keystore -alias witch6fortune -keyalg RSA -validity 10000
+pass witch666
