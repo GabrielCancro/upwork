@@ -3,6 +3,8 @@
 14/10 - 2hs - install and config SDK + KEYTOOLS
 15/10 - 1hs - check apk configs
 
+-AJUSTAR ICONO ADAPTATIVO (VER TAMAñO)
+
 - APK firmado para release (enviar key + password + alias)
 - AAB firmado para release (enviar key + password + alias)
 - Bundle ID / package name (ver que name quieren)
