@@ -10,8 +10,24 @@ config_version=4
 
 [application]
 
-config/name="Chinese"
+config/name="Chinese Fortune"
+run/main_scene="res://Main.tscn"
+boot_splash/show_image=false
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://global.gd"
+
+[display]
+
+window/size/width=720
+window/size/height=1280
+window/size/test_width=270
+window/size/test_height=480
+window/handheld/orientation="portrait"
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [physics]
 
