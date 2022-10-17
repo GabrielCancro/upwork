@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/Witch.gd" type="Script" id=1]
-[ext_resource path="res://assets/witch_bg.jpg" type="Texture" id=2]
-[ext_resource path="res://assets/main_bg.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/witch_bg_left.png" type="Texture" id=2]
 [ext_resource path="res://assets/settings/settings_btn_back.png" type="Texture" id=4]
 [ext_resource path="res://assets/witch/witch_table.png" type="Texture" id=5]
 [ext_resource path="res://assets/witch/witch_model_0.png" type="Texture" id=6]
@@ -14,6 +13,8 @@
 [ext_resource path="res://assets/witch/witch_fly_4.png" type="Texture" id=12]
 [ext_resource path="res://assets/witch/witch_fly_1.png" type="Texture" id=13]
 [ext_resource path="res://assets/witch/witch_fly_2.png" type="Texture" id=14]
+[ext_resource path="res://assets/witch_bg_right.png" type="Texture" id=15]
+[ext_resource path="res://assets/witch_bg_center.jpg" type="Texture" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "witch"
@@ -37,24 +38,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="TextureWallBg" type="TextureRect" parent="."]
-modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+[node name="ColorRectTop" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 3 )
-expand = true
-
-[node name="ColorRectTop" type="ColorRect" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -360.0
-margin_right = 360.0
 color = Color( 0.305882, 0.278431, 0.4, 1 )
 
 [node name="TextureBg" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+texture = ExtResource( 16 )
+stretch_mode = 4
+
+[node name="TextureBgR" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -360.0
+texture = ExtResource( 15 )
+stretch_mode = 4
+
+[node name="TextureBgL" type="TextureRect" parent="."]
+anchor_bottom = 1.0
+margin_right = 360.0
 texture = ExtResource( 2 )
 stretch_mode = 4
 
