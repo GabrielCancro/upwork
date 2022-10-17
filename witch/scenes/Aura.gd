@@ -1,6 +1,6 @@
 extends Control
 
-var state = "stoped"
+var state = "ready"
 
 func _ready():
 	Global.init_scene(name)
@@ -8,20 +8,55 @@ func _ready():
 	$btn_back.connect("button_down",self,"onClick",[$btn_back])
 	$btn_hold.connect("button_down",self,"onHoldDown")
 	$btn_hold.connect("button_up",self,"onHoldUp")
+	$Meaning.modulate.a = 0
+	check_aura_selcted()
 
-func _process(delta):
-	if state=="changing":
-		var i = randi()%6+1
-		$TextureBody1.texture = load("res://assets/aura/aura_"+str(i)+".png")
+func check_aura_selcted():
+	if Global.selected_aura == 0: return
+	state = "stoped"
+	$TextureText.visible = false
+	$btn_hold.visible = false
+	$Aura2.visible = false
+	$Aura1.texture = load("res://assets/aura/aura_"+str(Global.selected_aura)+".png")
+	$Meaning.texture = load("res://assets/meaning/meaning_color_"+str(Global.selected_aura-1)+".png")
+	$Meaning/Text_image.texture = load("res://assets/meaning/meaning_text_"+str(Global.selected_aura-1)+"_"+Global.options.language+".png")
+	$Meaning.modulate.a = 1
 
 func onClick(button):
 	if button==$btn_back: Global.goto_scene("Main")
 	Global.btn_click_effect(button)
 
 func onHoldDown():
-	print("DOWN")
+	if state!="ready": return
 	state = "changing"
+	$ColorRect.modulate.a = 0
+	$TextureText.visible = false
+	$ColorRect.visible = true
+	$Tween.interpolate_property($ColorRect,"modulate",Color(1,1,1,0),Color(1,1,1,.5),.2,Tween.TRANS_QUAD,Tween.EASE_IN)
+	while state=="changing":
+		$Aura1.texture = load("res://assets/aura/aura_"+str(Global.selected_aura)+".png")
+		$Aura1.modulate.a = 1
+		$Aura2.modulate.a = 0
+		var rnd = randi()%6+1
+		if rnd==Global.selected_aura: rnd = randi()%6+1
+		Global.selected_aura = rnd
+		$Tween.interpolate_property($Aura2,"modulate",Color(1,1,1,0),Color(1,1,1,1),.2,Tween.TRANS_QUAD,Tween.EASE_IN)
+		$Tween.interpolate_property($Aura2,"rect_scale",Vector2(1.2,1.1),Vector2(1,1),.2,Tween.TRANS_QUAD,Tween.EASE_IN)
+		$Tween.start()
+		$Aura2.texture = load("res://assets/aura/aura_"+str(Global.selected_aura)+".png")
+		yield($Tween,"tween_all_completed")
 
 func onHoldUp():
-	print("UP")
+	if state!="changing": return
 	state = "stoped"
+	$Aura1.modulate.a = 0
+	$Meaning.texture = load("res://assets/meaning/meaning_color_"+str(Global.selected_aura-1)+".png")
+	$Meaning/Text_image.texture = load("res://assets/meaning/meaning_text_"+str(Global.selected_aura-1)+"_"+Global.options.language+".png")
+	yield(get_tree().create_timer(.5),"timeout")
+	$Tween.interpolate_property($Meaning,"modulate",Color(1,1,1,0),Color(1,1,1,1),.5,Tween.TRANS_QUAD,Tween.EASE_IN)
+	$Tween.interpolate_property($Meaning,"rect_scale",Vector2(1.2,1.2),Vector2(1,1),.5,Tween.TRANS_QUAD,Tween.EASE_IN)
+	$Tween.interpolate_property($ColorRect,"modulate",Color(1,1,1,.5),Color(1,1,1,0),1,Tween.TRANS_QUAD,Tween.EASE_IN)
+	$Tween.start()
+	yield($Tween,"tween_all_completed")
+	$ColorRect.visible = false
+

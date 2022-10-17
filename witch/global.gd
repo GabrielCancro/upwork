@@ -5,6 +5,7 @@ var current_scene
 var transition_node
 var tween_node
 var options = { "sound":"on", "language":"en", "vibration":"on", "brightness":.7}
+var selected_aura = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
