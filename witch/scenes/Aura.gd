@@ -3,7 +3,6 @@ extends Control
 var state = "ready"
 
 func _ready():
-	Global.init_scene(name)
 	randomize()
 	$btn_back.connect("button_down",self,"onClick",[$btn_back])
 	$btn_hold.connect("button_down",self,"onHoldDown")
@@ -19,11 +18,12 @@ func check_aura_selcted():
 	$Aura2.visible = false
 	$Aura1.texture = load("res://assets/aura/aura_"+str(Global.selected_aura)+".png")
 	$Meaning.texture = load("res://assets/meaning/meaning_color_"+str(Global.selected_aura-1)+".png")
+	print("LOAD LOAD ","res://assets/meaning/meaning_text_"+str(Global.selected_aura-1)+"_"+Global.options.language+".png")
 	$Meaning/Text_image.texture = load("res://assets/meaning/meaning_text_"+str(Global.selected_aura-1)+"_"+Global.options.language+".png")
 	$Meaning.modulate.a = 1
 
 func onClick(button):
-	if button==$btn_back: Global.goto_scene("Main")
+	if button==$btn_back: Global.goto_scene("Menu")
 	Global.btn_click_effect(button)
 
 func onHoldDown():

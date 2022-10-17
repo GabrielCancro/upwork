@@ -1,7 +1,6 @@
 extends Control
 
 func _ready():
-	Global.init_scene(name)
 	$btn_start.connect("button_down",self,"onClick",[$btn_start])
 	$btn_aura.connect("button_down",self,"onClick",[$btn_aura])
 	$btn_info.connect("button_down",self,"onClick",[$btn_info])

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/witch_model_5.png-391e53d31c1beccb8aac4d4025a9858b.stex"
+path="res://.import/witch_model_5.png-eb7515bced09e36ae03dcbd824e0abcd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/witch/witch_model_5.png"
-dest_files=[ "res://.import/witch_model_5.png-391e53d31c1beccb8aac4d4025a9858b.stex" ]
+source_file="res://assets/witch/remove/witch_model_5.png"
+dest_files=[ "res://.import/witch_model_5.png-eb7515bced09e36ae03dcbd824e0abcd.stex" ]
 
 [params]
 

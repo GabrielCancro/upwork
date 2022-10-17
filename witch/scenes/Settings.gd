@@ -1,7 +1,6 @@
 extends Control
 
 func _ready():
-	Global.init_scene(name)
 	$btn_back.connect("button_down",self,"onClick",[$btn_back])
 	$btn_sound.connect("button_down",self,"onClick",[$btn_sound])
 	$btn_vibration.connect("button_down",self,"onClick",[$btn_vibration])
@@ -9,7 +8,7 @@ func _ready():
 	update_icons()
 
 func onClick(button):
-	if button==$btn_back: Global.goto_scene("Main")
+	if button==$btn_back: Global.goto_scene("Menu")
 	if button==$btn_sound: 
 		if Global.options.sound=="on": Global.options.sound = "off"
 		else: Global.options.sound = "on"
