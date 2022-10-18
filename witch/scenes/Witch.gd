@@ -49,6 +49,7 @@ func onPopupDone():
 	$popUp/Tween.interpolate_property($popUp/enterDesire,"rect_scale",Vector2(1,1),Vector2(.7,.7),.2,Tween.TRANS_QUAD,Tween.EASE_IN)
 	$popUp/Tween.start()
 	yield($popUp/Tween,"tween_all_completed")
+	if(Global.options.vibration=="on"): Input.vibrate_handheld(500)
 	$popUp.visible = false
 	$t_light.visible = true
 	$popUp/Tween.interpolate_property($t_light,"modulate",Color(1,1,1,0),Color(1,1,1,1),.5,Tween.TRANS_QUAD,Tween.EASE_IN)

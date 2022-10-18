@@ -15,6 +15,8 @@ var SOUNDS = {
 	"done": preload("res://assets/sfx/done.mp3"),
 	"paper": preload("res://assets/sfx/paper.mp3")
 }
+var music_seek = 0
+
 onready var MAIN = get_node("/root/Main")
 
 func _ready():
@@ -38,8 +40,10 @@ func btn_click_effect(node):
 func play_music():
 	if(options.sound != "on"): return
 	MAIN.get_node("ASP_music").play()
+	MAIN.get_node("ASP_music").seek(music_seek)
 
 func stop_sounds():
+	music_seek = MAIN.get_node("ASP_music").get_playback_position();
 	MAIN.get_node("ASP_music").stop()
 	MAIN.get_node("ASP_sfx").stop()
 

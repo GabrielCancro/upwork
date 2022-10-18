@@ -44,6 +44,7 @@ func onHoldDown():
 		$Tween.interpolate_property($Aura2,"rect_scale",Vector2(1.2,1.1),Vector2(1,1),.2,Tween.TRANS_QUAD,Tween.EASE_IN)
 		$Tween.start()
 		$Aura2.texture = load("res://assets/aura/aura_"+str(Global.selected_aura)+".png")
+		if(Global.options.vibration=="on"): Input.vibrate_handheld(100)
 		yield($Tween,"tween_all_completed")
 
 func onHoldUp():

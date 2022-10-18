@@ -3,6 +3,7 @@
 14/10 - 2hs - install and config SDK + KEYTOOLS
 15/10 - 2hs - check apk configs + aab/jdk settings
 17/10 - 2hs - witch scene effects and prepare chinese base project
+18/10 - 2hs - traductions, and pulishes
 
 -AJUSTAR ICONO ADAPTATIVO (VER TAMAñO)
 
