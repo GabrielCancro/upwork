@@ -12,3 +12,9 @@ func onClick(button):
 	if button==$btn_info: Global.goto_scene("Meaning")
 	if button==$btn_config: Global.goto_scene("Settings")
 	Global.btn_click_effect(button)
+
+func traduction():
+	$btn_title.icon = load("res://assets/main/main_btn_menu_"+Global.options.language+".png")
+	$btn_start.icon = load("res://assets/main/main_btn_start_"+Global.options.language+".png")
+	$btn_aura.icon = load("res://assets/main/main_btn_aura_"+Global.options.language+".png")
+

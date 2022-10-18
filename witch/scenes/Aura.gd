@@ -60,3 +60,7 @@ func onHoldUp():
 	yield($Tween,"tween_all_completed")
 	$ColorRect.visible = false
 
+func traduction():
+	$btn_title.icon = load("res://assets/aura/aura_btn_aura_"+Global.options.language+".png")
+	$TextureText.texture = load("res://assets/aura/aura_press_text_"+Global.options.language+".png")
+	

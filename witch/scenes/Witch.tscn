@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/Witch.gd" type="Script" id=1]
 [ext_resource path="res://assets/witch_bg_left.png" type="Texture" id=2]
+[ext_resource path="res://assets/witch/witch_text_top_en.png" type="Texture" id=3]
 [ext_resource path="res://assets/settings/settings_btn_back.png" type="Texture" id=4]
 [ext_resource path="res://assets/witch/witch_table.png" type="Texture" id=5]
 [ext_resource path="res://assets/witch/witch_model_0.png" type="Texture" id=6]
@@ -15,6 +16,7 @@
 [ext_resource path="res://assets/witch/witch_fly_2.png" type="Texture" id=14]
 [ext_resource path="res://assets/witch_bg_right.png" type="Texture" id=15]
 [ext_resource path="res://assets/witch_bg_center.jpg" type="Texture" id=16]
+[ext_resource path="res://assets/witch/witch_text_bottom_en.png" type="Texture" id=17]
 
 [sub_resource type="Animation" id=1]
 resource_name = "witch"
@@ -83,9 +85,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -283.0
+margin_left = -323.0
 margin_top = 25.0
-margin_right = 159.0
+margin_right = 119.0
 margin_bottom = 467.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 120, 320 )
@@ -117,13 +119,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -86.0
+margin_left = -120.0
 margin_top = -66.0
-margin_right = 220.0
+margin_right = 186.0
 margin_bottom = 581.0
 rect_pivot_offset = Vector2( 120, 320 )
 texture = ExtResource( 6 )
 stretch_mode = 4
+
+[node name="text_top" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -96.5
+margin_top = 100.0
+margin_right = 240.5
+margin_bottom = 142.0
+texture = ExtResource( 3 )
 
 [node name="t_table" type="TextureRect" parent="."]
 anchor_left = 0.5
@@ -137,6 +148,16 @@ margin_bottom = 652.0
 texture = ExtResource( 5 )
 expand = true
 stretch_mode = 5
+
+[node name="text_bottom" type="TextureRect" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -215.0
+margin_bottom = -43.0
+texture = ExtResource( 17 )
+stretch_mode = 4
 
 [node name="btn_papper" type="Button" parent="."]
 anchor_left = 0.5
@@ -164,13 +185,11 @@ color = Color( 0, 0, 0, 0.588235 )
 
 [node name="enterDesire" type="TextureRect" parent="popUp"]
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
 margin_left = -320.0
-margin_top = -372.0
+margin_top = 40.0
 margin_right = 320.0
-margin_bottom = 372.0
+margin_bottom = 784.0
 rect_pivot_offset = Vector2( 320, 600 )
 texture = ExtResource( 7 )
 
@@ -180,7 +199,7 @@ anchor_bottom = 1.0
 margin_left = 76.0
 margin_top = 104.0
 margin_right = -72.0
-margin_bottom = -185.0
+margin_bottom = -328.0
 theme = ExtResource( 8 )
 wrap_enabled = true
 
@@ -190,9 +209,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -261.0
-margin_top = 221.0
+margin_top = 92.0
 margin_right = 256.0
-margin_bottom = 313.0
+margin_bottom = 184.0
 focus_mode = 0
 flat = true
 __meta__ = {
