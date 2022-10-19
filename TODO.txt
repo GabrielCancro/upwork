@@ -1,23 +1,27 @@
 13/10 - 3hs - download assets and first configs
-13/10 - 1hs (CHAVO) - export assets
 14/10 - 2hs - install and config SDK + KEYTOOLS
 15/10 - 2hs - check apk configs + aab/jdk settings
 17/10 - 2hs - witch scene effects and prepare chinese base project
 18/10 - 2hs - traductions, and pulishes
 19/10 - 1hs - once a day aura timer
+TOTAL MOLE 12hs
 
--AJUSTAR ICONO ADAPTATIVO (VER TAMAñO)
+13/10 - 1hs (CHAVO) - export assets
+TOTAl CHAVO ??
 
-- APK firmado para release (enviar key + password + alias)
-- AAB firmado para release (enviar key + password + alias)
+- APK firmado para release
+- AAB firmado para release 
+- enviar key.keystore + password + alias
 - Bundle ID / package name (ver que name quieren)
 - Version number and build number of the app
 - Entregar el source
 - Hacer el chequeo en http://checkout-apk.com/
+- completar el form https://docs.google.com/forms/d/e/1FAIpQLSfqXC3lLe0cz4lfE6HKxiVlMDmwsKETxnOU9BmPkkwMiNsvag/viewform
 
-SIN ANDROID STUDIO
+
+SIN ANDROID STUDIO (INSTALAR APK NDK - es mejor usar android studio)
 sdkmanager --sdk_root=<android_sdk_path> "platform-tools" "build-tools;30.0.3" "platforms;android-31" "cmdline-tools;latest" "cmake;3.10.2.4988404" "ndk;21.4.7075529"
 
-el comando keytool de JDK puede usarse
+EL COMANDO KEYTOOL DE JDK PUEDE USARSE
 keytool -v -genkey -keystore witch6fortune.keystore -alias witch6fortune -keyalg RSA -validity 10000
 pass witch666
