@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/Witch.gd" type="Script" id=1]
 [ext_resource path="res://assets/witch_bg_left.png" type="Texture" id=2]
@@ -17,6 +17,12 @@
 [ext_resource path="res://assets/witch_bg_right.png" type="Texture" id=15]
 [ext_resource path="res://assets/witch_bg_center.jpg" type="Texture" id=16]
 [ext_resource path="res://assets/witch/witch_text_bottom_en.png" type="Texture" id=17]
+[ext_resource path="res://assets/fonts/3860-font.ttf" type="DynamicFontData" id=18]
+
+[sub_resource type="DynamicFont" id=2]
+size = 26
+extra_spacing_char = 1
+font_data = ExtResource( 18 )
 
 [sub_resource type="Animation" id=1]
 resource_name = "witch"
@@ -202,6 +208,9 @@ margin_top = 104.0
 margin_right = -72.0
 margin_bottom = -328.0
 theme = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "asdasdasdasdsad"
 wrap_enabled = true
 
 [node name="btn_popup_done" type="Button" parent="popUp/enterDesire"]

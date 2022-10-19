@@ -2,8 +2,14 @@ extends Node
 
 var transition_scene = preload("res://nodes/Transition.tscn")
 var current_scene
-var options = { "sound":"on", "language":"en", "vibration":"on", "brightness":.7}
-var selected_aura = 0
+var options = { 
+	"sound":"on", 
+	"language":"en", 
+	"vibration":"on", 
+	"brightness":.7,
+	"selected_aura":0,
+	"aura_date":""
+}
 var SCENES = {
 	"Menu": preload("res://scenes/Menu.tscn"),
 	"Aura": preload("res://scenes/Aura.tscn"),
@@ -57,13 +63,20 @@ func save_store_data():
 	file.open("user://store_app_data.res", File.WRITE)
 	file.store_string(var2str(options))
 	file.close()
+	print("SAVE ",options)
 
 func load_store_data():      
 	var file = File.new()
 	file.open("user://store_app_data.res", File.READ)
 	var loaded_data = str2var(file.get_as_text())
 	file.close()
+	if(loaded_data.size()!=options.size()): 
+		loaded_data = null
 	if(!loaded_data): 
 		loaded_data = options
 		save_store_data()
 	options = loaded_data
+
+func now_date():
+	var now = OS.get_date() 
+	return str(now.year)+"-"+str(now.month)+"-"+str(now.day)
