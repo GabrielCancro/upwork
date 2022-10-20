@@ -70,8 +70,7 @@ func load_store_data():
 	file.open("user://store_app_data.res", File.READ)
 	var loaded_data = str2var(file.get_as_text())
 	file.close()
-	if(loaded_data.size()!=options.size()): 
-		loaded_data = null
+	if(loaded_data && loaded_data.size()!=options.size()): loaded_data = null
 	if(!loaded_data): 
 		loaded_data = options
 		save_store_data()
