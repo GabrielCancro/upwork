@@ -25,3 +25,7 @@ sdkmanager --sdk_root=<android_sdk_path> "platform-tools" "build-tools;30.0.3" "
 EL COMANDO KEYTOOL DE JDK PUEDE USARSE
 keytool -v -genkey -keystore witch6fortune.keystore -alias witch6fortune -keyalg RSA -validity 10000
 pass witch666
+
+com.chinese.fortune000
+keytool -v -genkey -keystore chinese0fortune.keystore -alias chinese0fortune -keyalg RSA -validity 10000
+pass chinese000
