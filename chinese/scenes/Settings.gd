@@ -20,7 +20,7 @@ func onClick(button):
 		if Global.options.vibration=="on": Global.options.vibration = "off"
 		else: 
 			Global.options.vibration = "on"
-			Input.vibrate_handheld(500)
+			Input.vibrate_handheld(300)
 	if button==$btn_lan: 
 		if Global.options.language=="en": Global.options.language = "ru"
 		elif Global.options.language=="ru": Global.options.language = "zh"

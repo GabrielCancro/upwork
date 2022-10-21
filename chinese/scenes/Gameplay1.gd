@@ -1,6 +1,5 @@
 extends Control
 
-
 func _ready():
 	randomize()
 	$Popup.visible = false
@@ -12,17 +11,15 @@ func onClick(button):
 	Global.btn_click_effect(button)
 
 func _process(delta):
-	if Input.is_action_just_pressed("ui_accept"):
-		Global.goto_scene("Menu")
-	if Input.is_action_just_pressed("ui_down"):
-		show_fortune()
-	$Label.text=str($Shacker.progress)
+	$TextureProgress.value = $Shacker.progress
 
 func traduction():
 	$tx_text.texture = load("res://assets/gameplay/gameplay_shake_"+Global.options.language+".png")
 
 func show_fortune():
 	var i = randi()%20
+	if(Global.options.vibration=="on"): Input.vibrate_handheld(500)
+	$TextureProgress.visible = false
 	$Popup/Card/lb_num.text = str(i+1)
 	$Popup/Card/lb_desc.text = FortuneData.DESC[Global.options.language][i]
 	$Popup.modulate.a = 0

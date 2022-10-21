@@ -8,10 +8,8 @@ var SCENES = {
 	"Menu": preload("res://scenes/Menu.tscn"),
 	"Gameplay1": preload("res://scenes/Gameplay1.tscn"),
 	"Settings": preload("res://scenes/Settings.tscn"),
-	"Gameplay2": preload("res://scenes/Gameplay2.tscn"),
 }
 var SOUNDS = {
-	
 }
 var music_seek = 0
 onready var MAIN = get_node("/root/Main")
@@ -19,6 +17,7 @@ onready var MAIN = get_node("/root/Main")
 func _ready():
 	load_store_data()
 	goto_scene("Menu")
+	play_music()
 
 func goto_scene(name_scene):
 	MAIN.get_node("Transition").fadeIn()
@@ -33,24 +32,20 @@ func btn_click_effect(node):
 	MAIN.get_node("TweenBtnFx").interpolate_property(node,"modulate",Color(.5,.5,.5,1),Color(1,1,1,1),.3,Tween.TRANS_QUAD,Tween.EASE_OUT)
 	MAIN.get_node("TweenBtnFx").start()
 
-
 func play_music(): 
-	return
 	if(options.sound != "on"): return
 	MAIN.get_node("ASP_music").play()
 	MAIN.get_node("ASP_music").seek(music_seek)
 
 func stop_sounds(): 
-	return
 	music_seek = MAIN.get_node("ASP_music").get_playback_position();
 	MAIN.get_node("ASP_music").stop()
-	MAIN.get_node("ASP_sfx").stop()
 
-func play_sfx(id_sound):
-	return
-	if(options.sound != "on"): return
-	(MAIN.get_node("ASP_sfx") as AudioStreamPlayer).stream = SOUNDS[id_sound]
-	MAIN.get_node("ASP_sfx").play()
+#func play_sfx(id_sound):
+#	return
+#	if(options.sound != "on"): return
+#	(MAIN.get_node("ASP_sfx") as AudioStreamPlayer).stream = SOUNDS[id_sound]
+#	MAIN.get_node("ASP_sfx").play()
 
 func save_store_data():
 	var file = File.new()
