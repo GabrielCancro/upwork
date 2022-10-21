@@ -15,6 +15,7 @@ func _process(delta):
 
 func traduction():
 	$tx_text.texture = load("res://assets/gameplay/gameplay_shake_"+Global.options.language+".png")
+	$Popup/Card/btn_reset.icon = load("res://assets/gameplay/gameplay_btn_reset_"+Global.options.language+".png")
 
 func show_fortune():
 	var i = randi()%20
