@@ -1,0 +1,10 @@
+Develop 3 android games on React/Kotlin/Java/Xamarin/Godot/Dart/LibGDX - "3A" / "Stats" / "Colors"
+Mobile Game Development Posted Oct 21, 2022
+Need to develop a small Native Android (React/Kotlin/Java/Xamarin/Godot/Dart/LibGDX) app.
+
+A full description of the task is in the attachment. Please read it carefully.
+
+There is a design and concept.
+1. https://docs.google.com/document/d/1xlonJHwwnpfdrRXxpDkFJuSgmeAppgYuScy1MdlLi7A/edit?usp=sharing
+2. https://docs.google.com/document/d/1NWV9cN4m8KE1Ogpnl5YOVevTJ1LZ8-24PHf3ueOvGQE/edit?usp=sharing
+3. https://docs.google.com/document/d/1NZEjSOIom17QLmj6O-FgKwiug-izdNIefqTIvBh1nCU/edit?usp=sharing
