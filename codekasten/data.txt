@@ -1,21 +1,5 @@
-ejemplo https://codekasten.de/editor/?sp=BANA
+https://codekasten.de/editor/?sp=BANA
+https://codekasten.de/editor/?sp=SPAC
 
+mole 27/10 3hs
 
-schiff = figur("raumschiff2", 400, 250, 0.2)
-
-//schiff.sag("asd",5000)
-//schiff.bewegenX(1)
-schiff.bewegenNach(500,1,10)
-schiff.berührt()
-asteroidenSpawner()
-
-function asteroidenSpawner(){
-  ast = figur("asteroid", 0, 0, 0.2)
-  ast.berührt(schiff,)
-  ast.bewegenNach(800,450,50)
-  verzögern(2000,asteroidenSpawner)
-}
-
-function Abschließen(){
-
-}
