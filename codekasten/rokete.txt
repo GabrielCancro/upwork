@@ -1,0 +1,45 @@
+https://codekasten.de/editor/?sp=BANA
+https://codekasten.de/editor/?sp=SPAC
+
+mole 27/10 4hs
+
+
+schiff = figur("raumschiff2", 400, 225, 0.2)
+
+function asteroidenHersteller(){
+  y = zufallY() 
+  a = zufallsKommazahl(0,2)
+    if(a<1){
+      ast = figur("asteroid", 0, y, 0.2)
+    }
+    else{
+      ast = figur("asteroid", 800, y, 0.2)
+    }
+  ast.berührt(schiff,Abschließen)
+  ast.bewegenNach(400,225,70)  
+  ast.drehung( zufallsKommazahl(-20,20) )
+}
+asteroidenHersteller()
+
+function Abschließen (){ 
+  schiff.explodieren()
+  ende("Endo")
+}
+
+rakete = figur("rakete3", 9999, 9999, 0)
+function antippen(X,Y) { //onCLick
+  if(!rakete.inWelt()) rakete.löschen()
+  if(rakete.gelöscht){    
+    rakete = figur("rakete3", 400, 225, 0.1)
+    rakete.bewegenNach(X,Y,500)
+    rakete.dreheZu(X,Y)
+    schiff.dreheZu(X,Y)
+    rakete.berührt(ast,einschlag)  //addCollision
+  }
+}
+
+function einschlag(){
+  ast.explodieren()
+  rakete.löschen()
+  verzögern(1000,asteroidenHersteller)
+}
