@@ -1,8 +1,3 @@
-https://codekasten.de/editor/?sp=BANA
-https://codekasten.de/editor/?sp=SPAC
-
-mole 27/10 4hs
-
 
 schiff = figur("raumschiff2", 400, 225, 0.2)
 
