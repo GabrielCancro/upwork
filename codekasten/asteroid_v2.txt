@@ -1,0 +1,71 @@
+schiff = figur("raumschiff2", 400, 225, 0.2)
+schiff.endlosWelt()
+text("winkel: links / Rechts" , 10, 20, 16, ORANGE)
+text("Vorauszahlung: hoch" , 10, 40, 16, ORANGE)
+text("Unterbrechung: Nieder" , 10, 60, 16, ORANGE)
+text("rokete: Leertaste" , 10, 80, 16, ORANGE)
+
+function neuerAsteroid(){
+  y = zufallY() 
+  a = zufallsKommazahl(0,2)
+    if(a<1){
+      asteroid = figur("asteroid", 0, y, 0.2)
+    }
+    else{
+      asteroid = figur("asteroid", 800, y, 0.2)
+    }
+  asteroid.endlosWelt()
+  asteroid.berührt(schiff,Abschließen)
+  asteroid.bewegenNach(400,225, zufallsKommazahl(50,150) )  
+  asteroid.drehung( zufallsKommazahl(-50,50) )
+}
+neuerAsteroid()
+
+function Abschließen (){ 
+  schiff.explodieren()
+  ende("Endo")
+}
+
+//teklado
+function tasteGedrückt(taste){
+  schiff_winkel = schiff.richtung() 
+  X2 = schiff.X() + Math.cos(schiff_winkel/180*Math.PI)
+  Y2 = schiff.Y() + Math.sin(schiff_winkel/180*Math.PI)
+  if(taste=="ArrowLeft"){
+    schiff.drehung(-150)  
+  }  
+  if(taste=="ArrowRight"){    
+   schiff.drehung(+150) 
+  }
+  if(taste=="ArrowUp"){
+    schiff.bewegenNach(X2,Y2,100)
+  } 
+  if(taste=="ArrowDown"){
+    schiff.bremsen()
+  } 
+  if(taste==" "){
+    neueRakete()
+  } 
+}
+
+function tasteLosgelassen(taste){
+ if(taste=="ArrowLeft"){
+  schiff.drehung(0) 
+ }
+  if(taste=="ArrowRight"){    
+  schiff.drehung(0) 
+ }
+}
+
+function neueRakete(){
+  rakete = figur("rakete3", schiff.X(), schiff.Y(), 0.1)
+  rakete.bewegenNach(X2,Y2,500)
+  rakete.berührt(asteroid,einschlag)
+  rakete.richtung(schiff_winkel)
+}
+
+function einschlag(){
+  asteroid.explodieren()
+  rakete.löschen()
+  verzögern(1000,neuerAsteroid)
+}
