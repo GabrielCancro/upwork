@@ -1,0 +1,10 @@
+function update(){} //main loop for game
+
+function moveToAngle(angle,velocity) set velX and velY from angle
+
+function boundOfTheEdge() // object velocity change to oposite in collision with edges
+
+add feature to implement collision groups, and receive colliders in callbacks (3 functions)
+  figur.addToGroup("nameGroup")
+  collisionGroups(groupA,groupB,callback)
+  function callback(figur1, figur2)

@@ -1,0 +1,7 @@
+PONG
+31/10 1hs conseguir proyecto y manager
+
+ASTEROID
+27/10 2hs Estudiando API
+28/10 2hs Correccion final
+
