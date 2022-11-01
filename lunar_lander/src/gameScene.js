@@ -30,8 +30,8 @@ class gameScene extends Phaser.Scene
         if(this._fpsText) this._fpsText.text = Math.floor( game.loop.actualFps );
         this.ship.update(t,d);
         this.ship.moveControl(this.keys);
-        this._velText.text = "velX: "+Math.floor(this.ship.velX*100);
-        this._velText.text += "\nvelY: "+Math.floor(this.ship.velY*100);
+        this._velText.text = "velX: "+Math.floor(this.ship.velX*10);
+        this._velText.text += "\nvelY: "+Math.floor(this.ship.velY*10);
     }  
 }
 

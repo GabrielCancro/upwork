@@ -1,5 +1,5 @@
 
-const gravity = 0.098/60
+const gravity = 0.05
 export default class Ship extends Phaser.GameObjects.Container
 {
 	constructor(scene) {
@@ -14,15 +14,15 @@ export default class Ship extends Phaser.GameObjects.Container
     }
 
     moveControl(keys){
-        if(keys.left.isDown) this.velX -= .1/60
-        if(keys.right.isDown) this.velX += .1/60
-        if(keys.up.isDown) this.velY -= .1/60
+        if(keys.left.isDown) this.velX -= .1
+        if(keys.right.isDown) this.velX += .1
+        if(keys.up.isDown) this.velY -= .1
     }
 
     update(t,d){
         this.velY += gravity;
-        this.y += this.velY*d;
-        this.x += this.velX*d;
+        this.y += this.velY*d/100;
+        this.x += this.velX*d/100;
     }
 
 }

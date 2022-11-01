@@ -1,3 +1,5 @@
+ball = kreis(400,225,10, 0xffffff, 1)
+Geschwindigkeit = 200
 ping = kiste(50,225,15,100, 0xffffff, 1)
 ping2 = kiste(750,225,15,100, 0xffffff, 1)
 
