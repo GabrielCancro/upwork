@@ -1,4 +1,4 @@
-function update(){} //main loop for game
+function loop(){} //main loop for game
 
 function moveToAngle(angle,velocity) set velX and velY from angle
 

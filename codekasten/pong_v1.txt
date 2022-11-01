@@ -1,6 +1,3 @@
-ball = kreis(400,225,10, 0xffffff, 1)
-Geschwindigkeit = 200
-
 ping = kiste(50,225,15,100, 0xffffff, 1)
 ping2 = kiste(750,225,15,100, 0xffffff, 1)
 
@@ -31,39 +28,38 @@ function tasteLosgelassen(taste){
 }
 
 function BallBewegung(){
-  X = zufallsKommazahl(-300,-200)
-  Y = zufallsKommazahl(-100,100)
-  ball.berührt(ping,kollisionPing1)
-  ball.berührt(ping2,kollisionPing2)
+  ball.berührt(ping,kollisionPing)
+  ball.berührt(ping2,kollisionPing)
   ball.berührt(kanteOBEN,kantekollision)
   ball.berührt(kanteUNTEN,kantekollision)
   ball.berührt(kanteLINKS,finale)
   ball.berührt(kanteRECHTS,finale)
-  ball.bewegenX(X)
-  ball.bewegenY(Y)
+  ball.bewegenX(-200)
+  ball.bewegenY( zufallsKommazahl(-50,50) )
 }
 
 function pingBewegung(){
-  if( ping2.Y() > ball.Y() ) ping2.bewegenY(-75)
-  if( ping2.Y() < ball.Y() ) ping2.bewegenY(+75)
+  if(ball.bewegenX()>0){
+    if( ping2.Y() > ball.Y()+30 ) ping2.bewegenY(-90)
+    if( ping2.Y() < ball.Y()-30 ) ping2.bewegenY(+90)
+  }else{
+    ping2.bewegenY(0)
+  }
   verzögern(200,pingBewegung)
 }
 
-
-function kollisionPing1(){
-  Geschwindigkeit += 20
-  ball.bewegenX(Geschwindigkeit)  
-  nY = ball.Y() - ping.Y()
+function kollisionPing(){
+  if(ball.X()<400){
+    ball.bewegenX(Geschwindigkeit)
+    nY = ball.Y() - ping.Y()
+  }else{
+    ball.bewegenX(-Geschwindigkeit)
+    nY = ball.Y() - ping2.Y()
+  }
+  if(Geschwindigkeit<800){ Geschwindigkeit += 20
+  }
   ball.bewegenY(nY*2)
-  ball_vY = ball.bewegenY()
-}
-
-function kollisionPing2(){
-  Geschwindigkeit += 20
-  ball.bewegenX(-Geschwindigkeit)  
-  nY = ball.Y() - ping2.Y()
-  ball.bewegenY(nY*2)
-  ball_vY = ball.bewegenY()
+  ball_vY = ball.bewegenY()  
 }
 
 function kantekollision(){  
