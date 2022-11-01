@@ -1,7 +1,14 @@
+ARKANOID
+01/11 1hs start project and contracts
+
 PONG
 31/10 1hs conseguir proyecto y manager
+01/11 1hs corregir y pulir para entrega
+seba 2:15hs
 
 ASTEROID
 27/10 2hs Estudiando API
 28/10 2hs Correccion final
+seba 4:15hs
+
 
