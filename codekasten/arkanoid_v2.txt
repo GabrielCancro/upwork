@@ -1,0 +1,99 @@
+ball = kreis(400,225,8, 0xffffff, 1)
+Geschwindigkeit = 300
+ping = kiste(400,425,100,15, 0xffffff, 1)
+
+GANZ_Säule = 9
+GANZ_Reihe = 5
+COLORS = [0xffffff,0x00ff00,0x0000ff,0xff00ff,0xff0000]
+Stücke = gruppe()
+Stücke_zerstört = 0
+
+kanteOBEN = kiste(400,0,800,10, 0, 1)
+kanteUNTEN = kiste(400,450,800,10, 0, 1)
+kanteLINKS = kiste(0,225,10,450, 0, 1)
+kanteRECHTS = kiste(800,225,10,450, 0, 1)
+
+BallBewegung()
+SchaffenStücke()
+
+function SchaffenStücke(){
+    Säule = 0
+    wiederhole(GANZ_Säule,SchaffenSäule)
+}
+
+function SchaffenSäule(){
+  Säule += 1
+  Reihe = 0
+  wiederhole(GANZ_Reihe,SchaffenReihe)
+}
+
+function SchaffenReihe(){
+  Reihe += 1
+  k = kiste(Säule*80,Reihe*30,70,20, COLORS[Reihe-1], 1)
+  Stücke.figurAufnehmen(k)
+}
+
+function tasteGedrückt(taste){
+  if(taste=="ArrowLeft"){
+    ping.bewegenBis(40,425,200,bewegungStoppen(ping))
+  }
+  if(taste=="ArrowRight"){    
+    ping.bewegenBis(760,425,200,bewegungStoppen(ping))
+  }
+}
+
+function tasteLosgelassen(taste){
+  if(taste=="ArrowLeft"){
+  bewegungStoppen(ping)  
+ }
+  if(taste=="ArrowRight"){    
+  bewegungStoppen(ping)  
+ }
+}
+
+function onKollision( ball , Stücke ){
+  if( Stücke_zerstört >= (GANZ_Säule*GANZ_Reihe)-1){
+    Stücke.löschen() 
+    finale()
+  }
+  else{
+    Stücke.löschen()  
+    Stücke_zerstört  += 1
+    if( Stücke.Y() < ball.Y() ) kantekollisionOBEN()
+    if( Stücke.Y() > ball.Y() ) kantekollisionUNTEN()
+  }
+}
+
+function BallBewegung(){
+  ball.berührt(ping,kollisionPing)
+  ball.berührt(kanteOBEN,kantekollisionOBEN)
+  ball.berührt(kanteUNTEN,finale)
+  ball.berührt(kanteLINKS,kantekollision)
+  ball.berührt(kanteRECHTS,kantekollision)
+  ball.berührt(Stücke,onKollision)
+  ball.bewegenY(300)
+}
+function kollisionPing(){
+  ball.bewegenY(-Geschwindigkeit)
+  nX = ball.X() - ping.X() 
+  ball.bewegenX(nX*2)
+  ball_vX = ball.bewegenX() 
+}
+
+function kantekollision(){  
+  ball.bewegenX(-ball_vX)
+}
+
+function kantekollisionOBEN(){  
+   ball.bewegenY(Geschwindigkeit)
+}
+
+function kantekollisionUNTEN(){  
+   ball.bewegenY(-Geschwindigkeit)
+}
+
+function finale(){
+  if(ball.Y()>350) text("verlieren" , 300, 20, 30, ORANGE)
+  if(ball.Y()<350) text("gewinnen" , 300, 20, 30, ORANGE)
+  ende("Endo")
+}

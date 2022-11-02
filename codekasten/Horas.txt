@@ -1,5 +1,6 @@
 ARKANOID
 01/11 1hs start project and contracts
+seba x hs
 
 PONG
 31/10 1hs conseguir proyecto y manager
