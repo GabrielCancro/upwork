@@ -1,0 +1,32 @@
+schiff = figur("raumschiff2", 400, 225, 0.2)
+schiff.endlosWelt()
+tekladoArrowLeft = false
+tekladoArrowRight = false
+tekladoArrowUp = false
+
+teklado()
+function teklado(){
+  schiff_winkel = schiff.richtung() 
+  X2 = schiff.X() + Math.cos(schiff_winkel/180*Math.PI)
+  Y2 = schiff.Y() + Math.sin(schiff_winkel/180*Math.PI)
+  if(tekladoArrowRight) schiff.drehung(+150)
+  else if(tekladoArrowLeft) schiff.drehung(-150)
+  else schiff.drehung(0)
+  
+  if(tekladoArrowUp) schiff.bewegenNach(X2,Y2,100)
+  else schiff.bremsen()
+  
+  verzögern(50,teklado)
+}
+
+function tasteGedrückt(taste){  
+  if(taste=="ArrowLeft") tekladoArrowLeft = true
+  if(taste=="ArrowRight") tekladoArrowRight = true
+  if(taste=="ArrowUp") tekladoArrowUp = true
+}
+
+function tasteLosgelassen(taste){
+  if(taste=="ArrowLeft") tekladoArrowLeft = false
+  if(taste=="ArrowRight") tekladoArrowRight = false
+  if(taste=="ArrowUp") tekladoArrowUp = false
+}
