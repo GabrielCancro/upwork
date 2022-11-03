@@ -1,0 +1,94 @@
+zielS = figur("ziel", 200, 9, 0.1)
+zielB = figur("ziel", 600, 9, 0.1)
+schiffS = figur("raumschiff2", 200, 420, 0.2)
+schiffB = figur("raumschiff2", 600, 420, 0.2)
+schiffS.richtung(-90) 
+schiffB.richtung(-90) 
+schiffSPunktzahl = 0
+schiffBPunktzahl = 0
+
+kanteHOCH = kiste(400,0,800,20, 0x000000, 1)
+kanteMITTE = kiste(400,225,10,450, 0x000000, 1)
+kanteLINKS = kiste(0,225,10,450, 0x000000, 1)
+kanteRECHTS = kiste(800,225,10,450, 0x000000, 1)
+
+T1 = text("0" , 20, 370, 60, WHITE)
+T2 = text("0" , 740, 370, 60, WHITE)
+
+schiffB.bewegenY(-60)
+schiffB.berührt(kanteHOCH,Runde)
+schiffS.berührt(kanteHOCH,Runde)
+
+function tasteGedrückt(taste){
+  if(taste=="ArrowUp") schiffS.bewegenY(-100)
+  if(taste=="ArrowDown") schiffS.bewegenY(100)
+  if(taste=="ArrowLeft") schiffS.bewegenX(-100)
+  if(taste=="ArrowRight") schiffS.bewegenX(100)
+}
+
+function tasteLosgelassen(taste){
+  if(taste=="ArrowUp") schiffS.bewegenY(0)
+  if(taste=="ArrowDown") schiffS.bewegenY(0)
+  if(taste=="ArrowLeft") schiffS.bewegenX(0)
+  if(taste=="ArrowRight") schiffS.bewegenX(0)
+}
+
+//create asteroids
+function neuerAsteroid(){
+  y = zufallsKommazahl(50,360) 
+  a = zufallsKommazahl(0,2)
+  Geschwindigkeit = zufallsKommazahl(80,200)
+  if(a<1){
+    asteroid = figur("asteroid", 30, y, 0.1)
+    asteroid.bewegenX(Geschwindigkeit)
+  }else{
+    asteroid = figur("asteroid", 800-30, y, 0.1)
+    asteroid.bewegenX(-Geschwindigkeit)
+  }  
+  asteroid.drehung( zufallsKommazahl(-50,50) )
+  asteroid.berührt(schiffS,Kollision)
+  asteroid.berührt(schiffB,Kollision)
+  asteroid.berührt(kanteLINKS,zerstörenAsteroid)
+  asteroid.berührt(kanteRECHTS,zerstörenAsteroid)
+  verzögern(600,neuerAsteroid) 
+}
+neuerAsteroid()
+
+function Kollision( asteroid, schiff ){
+  schiff.Y(450)
+  asteroid.X( schiff.X() )
+  asteroid.explodieren()
+}
+
+function zerstörenAsteroid(ast){
+  ast.löschen()
+}
+  
+function Runde(schiff){
+  schiff.Y(460)
+  if(schiff==schiffS) PunktzahlS()
+  if(schiff==schiffB) PunktzahlB()
+}
+
+function PunktzahlS(){
+  schiffSPunktzahl += 1
+  T1.löschen()
+  T1 = text(schiffSPunktzahl , 20, 370, 60, WHITE) 
+  if(schiffSPunktzahl >= 5) Finale()
+}
+
+function PunktzahlB(){  
+  schiffBPunktzahl += 1   
+  T2.löschen()
+  T2 = text(schiffBPunktzahl , 740, 370, 60, WHITE) 
+  if(schiffBPunktzahl >= 5) Finale()
+}
+
+function Finale(){
+  if(schiffSPunktzahl > schiffBPunktzahl){
+    text("gewinnen" , 300, 20, 30, ORANGE)
+  }else{
+    text("verlieren" , 300, 20, 30, ORANGE)
+  } 
+  ende("endo")
+}

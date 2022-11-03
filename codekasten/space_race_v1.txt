@@ -1,0 +1,112 @@
+zielS = figur("ziel", 200, 9, 0.1)
+zielB = figur("ziel", 600, 9, 0.1)
+schiffS = figur("raumschiff2", 200, 420, 0.2)
+schiffB = figur("raumschiff2", 600, 420, 0.2)
+
+schiffS.richtung(-90) 
+schiffB.richtung(-90) 
+schiffSPunktzahl = 0
+schiffBPunktzahl = 0
+
+kanteOBEN = kiste(400,-60,800,10, 0, 1)
+kanteMITTE = kiste(400,225,10,450, 0, 1)
+kanteLINKS = kiste(0,225,10,450, 0, 1)
+kanteRECHTS = kiste(800,225,10,450, 0, 1)
+
+SchiffBewegung()
+
+function tasteGedrückt(taste){
+  if(taste=="ArrowUp"){
+  schiffS.bewegenY(-100) 
+ }
+  if(taste=="ArrowDown"){    
+  schiffS.bewegenY(100)
+ }
+  if(taste=="ArrowLeft"){
+  schiffS.bewegenX(-100) 
+ }
+  if(taste=="ArrowRight"){    
+  schiffS.bewegenX(100)
+ }
+}
+
+function tasteLosgelassen(taste){
+  if(taste=="ArrowUp"){
+  schiffS.bewegenY(0) 
+ }
+  if(taste=="ArrowDown"){    
+  schiffS.bewegenY(0)
+ }
+   if(taste=="ArrowLeft"){
+  schiffS.bewegenX(0) 
+ }
+  if(taste=="ArrowRight"){    
+  schiffS.bewegenX(0)
+ }
+}
+function neuerAsteroid(){
+  y = zufallsKommazahl(50,360) 
+  a = zufallsKommazahl(0,2)
+  Geschwindigkeit = zufallsKommazahl(80,200)
+    if(a<1){
+      asteroid = figur("asteroid", 0, y, 0.1)
+      asteroid.bewegenX(Geschwindigkeit)
+    }
+    else{
+      asteroid = figur("asteroid", 800, y, 0.1)
+      asteroid.bewegenX(-Geschwindigkeit)
+    }  
+  asteroid.drehung( zufallsKommazahl(-50,50) )
+  verzögern(600,neuerAsteroid) 
+  schiffS.berührt(asteroid,KollisionS)
+  schiffB.berührt(asteroid,KollisionB)
+}
+neuerAsteroid()
+
+function KollisionS( schiffS , asteroid ){
+  schiffS.Y(480)
+  asteroid.explodieren()
+}
+
+function KollisionB( schiffB , asteroid ){
+  schiffB.Y(480)
+  asteroid.explodieren()
+}
+
+function SchiffBewegung(){
+  schiffB.bewegenY(-60)
+  schiffB.berührt(zielB,PunktzahlB)
+  schiffS.berührt(zielS,RundeS)
+}
+  
+function RundeS(schiffS, zielS){
+  schiffS.Y(480)
+  verzögern(3000,PunktzahlS)
+}
+function  PunktzahlS(){
+  if(schiffSPunktzahl  >= 5){ 
+    Finale()
+  }else{
+    schiffSPunktzahl += 1
+    zielS.sag(schiffSPunktzahl,2000)     
+  }
+}
+
+function PunktzahlB(schiffB, zielB){
+  schiffB.Y(480)
+    if(schiffBPunktzahl  >= 5){
+      Finale()
+    }else{    
+      verzögern(500,schiffBPunktzahl += 1)      
+      zielB.sag(schiffBPunktzahl,2000)
+    }
+}
+
+function Finale(){
+  if(schiffSPunktzahl > schiffBPunktzahl){
+    text("gewinnen" , 300, 20, 30, ORANGE)
+  }else{
+    text("verlieren" , 300, 20, 30, ORANGE)
+  } 
+  ende("endo")
+}

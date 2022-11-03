@@ -1,0 +1,83 @@
+Panzer1 = figur("raumschiff2", 400, 225, 0.2)
+Panzer1.endlosWelt()
+Panzer1.tekLeft = false
+Panzer1.tekRight = false
+Panzer1.tekUp = false
+
+Panzer2 = figur("raumschiff2", 400, 225, 0.2)
+Panzer2.endlosWelt()
+Panzer2.tekLeft = false
+Panzer2.tekRight = false
+Panzer2.tekUp = false
+
+teklado()
+function teklado(){
+  //PANZER1
+  Panzer1.wX = Math.cos(Panzer1.richtung()/180*Math.PI)
+  Panzer1.wY = Math.sin(Panzer1.richtung()/180*Math.PI)
+  Panzer1.X2 = Panzer1.X() + Panzer1.wX
+  Panzer1.Y2 = Panzer1.Y() + Panzer1.wY
+  if(Panzer1.tekRight) Panzer1.drehung(+150)
+  else if(Panzer1.tekLeft) Panzer1.drehung(-150)
+  else Panzer1.drehung(0)  
+  if(Panzer1.tekUp) Panzer1.bewegenNach(Panzer1.X2,Panzer1.Y2,100)
+  else Panzer1.bremsen()
+  
+  //PANZER2
+  Panzer2.wX = Math.cos(Panzer2.richtung()/180*Math.PI)
+  Panzer2.wY = Math.sin(Panzer2.richtung()/180*Math.PI)
+  Panzer2.X2 = Panzer2.X() + Panzer2.wX
+  Panzer2.Y2 = Panzer2.Y() + Panzer2.wY
+  if(Panzer2.tekRight) Panzer2.drehung(+150)
+  else if(Panzer2.tekLeft) Panzer2.drehung(-150)
+  else Panzer2.drehung(0)  
+  if(Panzer2.tekUp) Panzer2.bewegenNach(Panzer2.X2,Panzer2.Y2,100)
+  else Panzer2.bremsen()
+  
+  verzögern(50,teklado)
+}
+
+function tasteGedrückt(taste){ 
+  //PANZER1
+  if(taste=="ArrowLeft") Panzer1.tekLeft = true
+  if(taste=="ArrowRight") Panzer1.tekRight = true
+  if(taste=="ArrowUp") Panzer1.tekUp = true
+  
+  //PANZER2
+  if(taste.toUpperCase()=="A") Panzer2.tekLeft = true
+  if(taste.toUpperCase()=="D") Panzer2.tekRight = true
+  if(taste.toUpperCase()=="W") Panzer2.tekUp = true
+}
+
+function tasteLosgelassen(taste){
+  //PANZER1
+  if(taste=="ArrowLeft") Panzer1.tekLeft = false
+  if(taste=="ArrowRight") Panzer1.tekRight = false
+  if(taste=="ArrowUp") Panzer1.tekUp = false
+  
+  //PANZER2
+  if(taste.toUpperCase()=="A") Panzer2.tekLeft = false
+  if(taste.toUpperCase()=="D") Panzer2.tekRight = false
+  if(taste.toUpperCase()=="W") Panzer2.tekUp = false
+}
+
+MAUERN = gruppe()
+MauernErstellen()
+Panzer1.berührt(MAUERN,kollisionPanzer1)
+Panzer2.berührt(MAUERN,kollisionPanzer1)
+function MauernErstellen(){
+  m = kiste(400,100,500,20, 0xFFFFFF, 1)
+  //m = figur("maschine2",400,100,.1)
+  MAUERN.figurAufnehmen(m)
+}
+
+function kollisionPanzer1(){
+  Panzer1.tekUp = false
+  Panzer1.X( Panzer1.X() - Panzer1.wX*.1 )
+  Panzer1.Y( Panzer1.Y() - Panzer1.wY*.1 )
+}
+function kollisionPanzer2(){
+  Panzer2.tekUp = false
+  Panzer2.X( Panzer2.X() - Panzer2.wX*.1 )
+  Panzer2.Y( Panzer2.Y() - Panzer2.wY*.1 )
+}
