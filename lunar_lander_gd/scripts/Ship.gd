@@ -6,12 +6,16 @@ var velocity = Vector2()
 var fuel = 250
 var stable = "false"
 var active = false
+var max_speed_to_land = 10
 onready var start_pos = position
 signal destroy
 signal victory
 
 func _ready():
+	randomize()
 	$Area2D.connect("body_entered",self,"onContact")
+	get_node("/root/Lunar").remove_child( get_node("/root/Lunar/Camera2D") )
+	add_child( get_node("/root/Lunar/Camera2D") )
 
 func resetAndPlay():
 	position = start_pos
@@ -19,23 +23,34 @@ func resetAndPlay():
 	fuel = 250
 	stable = "false"
 	active = true
+	$Sprite.modulate = Color(1,1,1,1)
+	$Sprite.scale = Vector2(1,1)
 
 func _process(delta):
+	var z = 1 + velocity.length()/1000
+	$Camera2D.zoom = Vector2(z,z)
 	if !active: return
+	prop_fx()
 	velocity.y += gravity
 	velocity = move_and_slide(velocity,Vector2.UP)
 	controlls()
 	raycastCheck()
 
 func controlls():
+	$prop_down.visible = false
+	$prop_left.visible = false
+	$prop_right.visible = false
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= propulsion
+		$prop_right.visible = true
 		fuel -= .1
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += propulsion
+		$prop_left.visible = true
 		fuel -= .1
 	if Input.is_action_pressed("ui_up"):
 		velocity.y -= propulsion
+		$prop_down.visible = true
 		fuel -= .1
 
 func raycastCheck():
@@ -44,8 +59,25 @@ func raycastCheck():
 	stable = ( $RayLeft.is_colliding() && $RayRight.is_colliding() )
 
 func onContact(body):
-	print("CONTACT TO "+body.name)
-	print("STABLE? ",stable)
 	active = false
-	if(stable && velocity.length()<15): emit_signal("victory")
-	else: emit_signal("destroy")
+	$prop_down.visible = false
+	$prop_left.visible = false
+	$prop_right.visible = false
+	if(stable && velocity.length()<max_speed_to_land): 
+		yield(get_tree().create_timer(1),"timeout")
+		emit_signal("victory")
+	else: 
+		$Tween.interpolate_property($Sprite,"modulate",Color(1,1,1,1),Color(1,1,1,0),.3,Tween.TRANS_EXPO,Tween.EASE_OUT)
+		$Tween.interpolate_property($Sprite,"scale",$Sprite.scale,Vector2(2,2),.3,Tween.TRANS_EXPO,Tween.EASE_OUT)
+		$Tween.start()
+		yield(get_tree().create_timer(1),"timeout")
+		emit_signal("destroy")
+	
+
+func prop_fx():
+	$prop_down.scale.x = .1+randf()*.2
+	$prop_down.scale.y = .15+randf()*.3
+	$prop_left.scale.x = .3+randf()*.2
+	$prop_left.scale.y = .15+randf()*.2
+	$prop_right.scale.x = .3+randf()*.2
+	$prop_right.scale.y = .15+randf()*.2
