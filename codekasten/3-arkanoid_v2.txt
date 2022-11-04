@@ -1,4 +1,4 @@
-ball = kreis(400,225,8, 0xffffff, 1)
+ball = kreis(405,225,8, 0xffffff, 1)
 Geschwindigkeit = 300
 ping = kiste(400,425,100,15, 0xffffff, 1)
 
@@ -74,9 +74,10 @@ function BallBewegung(){
   ball.bewegenY(300)
 }
 function kollisionPing(){
+  if(Geschwindigkeit<500) Geschwindigkeit += 5
   ball.bewegenY(-Geschwindigkeit)
   nX = ball.X() - ping.X() 
-  ball.bewegenX(nX*2)
+  ball.bewegenX(nX*3)
   ball_vX = ball.bewegenX() 
 }
 
