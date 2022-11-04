@@ -1,6 +1,15 @@
+TANKS
+3/11 22:30hs collisiones
+2/11 1hs movimiento loopeado
+seba
+
+SPACERACE
+3/11 1hs correcciones y pulido
+seba 2:30hs
+
 ARKANOID
 01/11 1hs start project and contracts
-seba 3:45 hs
+seba 3:45hs
 
 PONG
 31/10 1hs conseguir proyecto y manager

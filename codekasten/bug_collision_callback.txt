@@ -1,0 +1,13 @@
+schiffB = figur("raumschiff2", 600, 420, 0.2)
+kanteHOCH = kiste(400,0,800,20, 0xFF0000, 1)
+schiffBPunktzahl = 0
+T2 = text(schiffBPunktzahl , 740, 370, 60, WHITE)
+schiffB.bewegenY(-160)
+schiffB.berührt(kanteHOCH,PunktzahlB)
+
+function PunktzahlB(){ 
+  schiffB.Y(460) 
+  schiffBPunktzahl += 1   
+  T2.löschen()
+  T2 = text(schiffBPunktzahl , 740, 370, 60, WHITE) 
+}
