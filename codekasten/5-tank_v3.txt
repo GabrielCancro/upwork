@@ -1,0 +1,123 @@
+Panzer1 = figur("raumschiff5", 150, 225, 0.15)
+Panzer1.endlosWelt()
+Panzer1.tekLeft = false
+Panzer1.tekRight = false
+Panzer1.tekUp = false
+Panzer1.tekDown = false
+Panzer1.richtung(+90) 
+text("Pfeile zu bewegen" , 20, 400, 15, ORANGE)
+text("runter zum Feuer" , 20, 415, 15, ORANGE)
+
+Panzer2 = figur("raumschiff5", 650, 225, 0.15)
+Panzer2.färben(0xA0FFA0)
+Panzer2.endlosWelt()
+Panzer2.tekLeft = false
+Panzer2.tekRight = false
+Panzer2.tekUp = false
+Panzer2.tekDown = false
+Panzer2.richtung(-90)
+text("AWD zu bewegen" , 650, 400, 15, ORANGE)
+text("S zum Feuer" , 650, 415, 15, ORANGE)
+
+teklado()
+function teklado(){
+  //PANZER1
+  Panzer1.wX = Math.cos((Panzer1.richtung()-90)/180*Math.PI)
+  Panzer1.wY = Math.sin((Panzer1.richtung()-90)/180*Math.PI)
+  Panzer1.X2 = Panzer1.X() + Panzer1.wX*10
+  Panzer1.Y2 = Panzer1.Y() + Panzer1.wY*10
+  if(Panzer1.tekRight) Panzer1.drehung(+150)
+  else if(Panzer1.tekLeft) Panzer1.drehung(-150)
+  else Panzer1.drehung(0)  
+  if(Panzer1.tekUp) Panzer1.bewegenNach(Panzer1.X2,Panzer1.Y2,100)
+  else Panzer1.bremsen()
+  
+  //PANZER2
+  Panzer2.wX = Math.cos((Panzer2.richtung()-90)/180*Math.PI)
+  Panzer2.wY = Math.sin((Panzer2.richtung()-90)/180*Math.PI)
+  Panzer2.X2 = Panzer2.X() + Panzer2.wX*10
+  Panzer2.Y2 = Panzer2.Y() + Panzer2.wY*10
+  if(Panzer2.tekRight) Panzer2.drehung(+150)
+  else if(Panzer2.tekLeft) Panzer2.drehung(-150)
+  else Panzer2.drehung(0)  
+  if(Panzer2.tekUp) Panzer2.bewegenNach(Panzer2.X2,Panzer2.Y2,100)
+  else Panzer2.bremsen()
+  
+  verzögern(50,teklado)
+}
+
+function tasteGedrückt(taste){ 
+  //PANZER1
+  if(taste=="ArrowLeft") Panzer1.tekLeft = true
+  if(taste=="ArrowRight") Panzer1.tekRight = true
+  if(taste=="ArrowUp") Panzer1.tekUp = true
+  if(taste=="ArrowDown") Panzer1NeueRakete()
+  
+  //PANZER2
+  if(taste.toUpperCase()=="A") Panzer2.tekLeft = true
+  if(taste.toUpperCase()=="D") Panzer2.tekRight = true
+  if(taste.toUpperCase()=="W") Panzer2.tekUp = true
+  if(taste.toUpperCase()=="S") Panzer2NeueRakete()
+}
+
+function tasteLosgelassen(taste){
+  //PANZER1
+  if(taste=="ArrowLeft") Panzer1.tekLeft = false
+  if(taste=="ArrowRight") Panzer1.tekRight = false
+  if(taste=="ArrowUp") Panzer1.tekUp = false
+  
+  //PANZER2
+  if(taste.toUpperCase()=="A") Panzer2.tekLeft = false
+  if(taste.toUpperCase()=="D") Panzer2.tekRight = false
+  if(taste.toUpperCase()=="W") Panzer2.tekUp = false
+}
+
+MAUERN = gruppe()
+MauernErstellen()
+Panzer1.berührt(MAUERN,einschlag)
+Panzer2.berührt(MAUERN,einschlag)
+
+function MauernErstellen(){
+  m = kiste(400,0,800,20, 0xFF0000, 1)
+  MAUERN.figurAufnehmen(m)
+  m = kiste(400,450,800,20, 0xFF0000, 1)
+  MAUERN.figurAufnehmen(m)
+  m = kiste(0,225,20,450, 0xFF0000, 1)
+  MAUERN.figurAufnehmen(m)
+  m = kiste(800,225,20,450, 0xFF0000, 1)
+  MAUERN.figurAufnehmen(m)
+  
+  m = kiste(200,120,180,20, 0xFF0000, 1)
+  MAUERN.figurAufnehmen(m)
+  m = kiste(400,225,20,150, 0xFF0000, 1)
+  MAUERN.figurAufnehmen(m)
+  m = kiste(600,330,180,20, 0xFF0000, 1)
+  MAUERN.figurAufnehmen(m)
+}
+
+function Panzer1NeueRakete(){
+  rakete = figur("rakete3", Panzer1.X(), Panzer1.Y(), 0.1)
+  rakete.bewegenNach(Panzer1.X2,Panzer1.Y2,500)
+  Panzer2.berührt(rakete,einschlag)
+  rakete.berührt(MAUERN,raketeMauren)
+  rakete.richtung((Panzer1.richtung()-90))
+}
+
+function Panzer2NeueRakete(){
+  rakete = figur("rakete3", Panzer2.X(), Panzer2.Y(), 0.1)
+  rakete.bewegenNach(Panzer2.X2,Panzer2.Y2,500)
+  Panzer1.berührt(rakete,einschlag)
+  rakete.berührt(MAUERN,raketeMauren)
+  rakete.richtung((Panzer2.richtung()-90))
+}
+
+function einschlag(PanzerX){
+  PanzerX.explodieren()
+  if(PanzerX==Panzer1) ende("Spieler 2 gewinnt")
+  if(PanzerX==Panzer2) ende("Spieler 1 gewinnt")
+}
+
+function raketeMauren(rak){
+  rak.explodieren()
+  rakete.löschen()
+}

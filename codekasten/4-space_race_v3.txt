@@ -13,7 +13,9 @@ kanteLINKS = kiste(0,225,10,450, 0x000000, 1)
 kanteRECHTS = kiste(800,225,10,450, 0x000000, 1)
 
 T1 = text("0" , 20, 370, 60, WHITE)
-T2 = text("0" , 740, 370, 60, WHITE)
+text("/5" , 60, 395, 30, WHITE)
+T2 = text("0" , 700, 370, 60, WHITE)
+text("/5" , 740, 395, 30, WHITE)
 
 schiffB.bewegenY(-60)
 schiffB.berührt(kanteHOCH,Runde)
@@ -88,7 +90,7 @@ function PunktzahlB(){
   schiffB.arbeiten = true
   schiffBPunktzahl += 1   
   T2.löschen()
-  T2 = text(schiffBPunktzahl , 740, 370, 60, WHITE) 
+  T2 = text(schiffBPunktzahl , 700, 370, 60, WHITE) 
   if(schiffBPunktzahl >= 5) Finale()
   verzögern(10,fertigArbeitenB)
 }

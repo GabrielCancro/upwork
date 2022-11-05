@@ -94,7 +94,7 @@ function kantekollisionUNTEN(){
 }
 
 function finale(){
-  if(ball.Y()>350) text("verlieren" , 300, 20, 30, ORANGE)
-  if(ball.Y()<350) text("gewinnen" , 300, 20, 30, ORANGE)
+  if(ball.Y()>350) text("verlieren" , 340, 225, 30, ORANGE)
+  if(ball.Y()<350) text("gewinnen" , 340, 225, 30, ORANGE)
   ende("Endo")
 }
