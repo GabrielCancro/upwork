@@ -7,6 +7,13 @@ var phaserConfig = {
     type: Phaser.WEBGL,
     transparent: false,
     //audio: { disableWebAudio: true },
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 0 },
+            debug: true
+        }
+    },
     scale: { 
         mode: Phaser.Scale.WIDTH_CONTROLS_HEIGHT, 
         autoCenter: Phaser.Scale.CENTER_BOTH, 
