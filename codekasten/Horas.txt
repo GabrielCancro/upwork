@@ -1,7 +1,10 @@
+TOTAL MOLE 12hs
+TOTAL SEBA 14hs
+
 TANKS
-3/11 22:30hs collisiones
+3/11 2:30hs collisiones
 2/11 1hs movimiento loopeado
-seba
+seba 1:30hs
 
 SPACERACE
 3/11 1hs correcciones y pulido
@@ -20,5 +23,3 @@ ASTEROID
 27/10 2hs Estudiando API
 28/10 2hs Correccion final
 seba 4:15hs
-
-
