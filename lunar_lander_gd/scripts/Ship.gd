@@ -1,18 +1,16 @@
 extends KinematicBody2D
 
-var gravity = 0.2
-var propulsion = 0.4
 var velocity = Vector2()
-var fuel = 250
+var fuel = 0
 var stable = "false"
 var active = false
-var max_speed_to_land = 10
 onready var start_pos = position
 signal destroy
 signal victory
 
 func _ready():
 	randomize()
+	fuel = GlobalConfig.start_fuel
 	$Area2D.connect("body_entered",self,"onContact")
 	get_node("/root/Lunar").remove_child( get_node("/root/Lunar/Camera2D") )
 	add_child( get_node("/root/Lunar/Camera2D") )
@@ -20,7 +18,7 @@ func _ready():
 func resetAndPlay():
 	position = start_pos
 	velocity = Vector2()
-	fuel = 250
+	fuel = GlobalConfig.start_fuel
 	stable = "false"
 	active = true
 	$Sprite.modulate = Color(1,1,1,1)
@@ -31,7 +29,7 @@ func _process(delta):
 	$Camera2D.zoom = Vector2(z,z)
 	if !active: return
 	prop_fx()
-	velocity.y += gravity
+	velocity.y += GlobalConfig.gravity
 	velocity = move_and_slide(velocity,Vector2.UP)
 	controlls()
 	raycastCheck()
@@ -41,15 +39,15 @@ func controlls():
 	$prop_left.visible = false
 	$prop_right.visible = false
 	if Input.is_action_pressed("ui_left"):
-		velocity.x -= propulsion
+		velocity.x -= GlobalConfig.propulsion
 		$prop_right.visible = true
 		fuel -= .1
 	if Input.is_action_pressed("ui_right"):
-		velocity.x += propulsion
+		velocity.x += GlobalConfig.propulsion
 		$prop_left.visible = true
 		fuel -= .1
 	if Input.is_action_pressed("ui_up"):
-		velocity.y -= propulsion
+		velocity.y -= GlobalConfig.propulsion
 		$prop_down.visible = true
 		fuel -= .1
 
@@ -63,7 +61,7 @@ func onContact(body):
 	$prop_down.visible = false
 	$prop_left.visible = false
 	$prop_right.visible = false
-	if(stable && velocity.length()<max_speed_to_land): 
+	if(stable && velocity.length()<GlobalConfig.max_speed_to_land): 
 		yield(get_tree().create_timer(1),"timeout")
 		emit_signal("victory")
 	else: 

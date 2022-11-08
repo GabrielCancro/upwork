@@ -12,7 +12,7 @@ func _process(delta):
 	$lbl_info.text += "\nvelY " + str( floor( Ship.velocity.y * 10 ) )
 	$lbl_info.text += "\nfuel " + str( floor( Ship.fuel ) )
 	$lbl_info.text += "\nvvv " + str( floor( Ship.velocity.length() ) )
-	$lbl_fast.visible = (Ship.velocity.length()>Ship.max_speed_to_land)
+	$lbl_fast.visible = (Ship.velocity.length()>GlobalConfig.max_speed_to_land)
 
 func onClickStart():
 	$btn_start.visible = false
