@@ -1,0 +1,1548 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/sim_tx1.png" type="Texture" id=1]
+[ext_resource path="res://assets/sim_tx2.png" type="Texture" id=2]
+[ext_resource path="res://assets/sim_tel_logo.png" type="Texture" id=3]
+[ext_resource path="res://minigames/TelephoneRecordsMinigame.gd" type="Script" id=4]
+[ext_resource path="res://assets/next.png" type="Texture" id=5]
+[ext_resource path="res://assets/Roboto-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/codice_alfa.jpg" type="Texture" id=7]
+[ext_resource path="res://assets/dati_traffico.jpg" type="Texture" id=8]
+[ext_resource path="res://Transition.tscn" type="PackedScene" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
+
+[node name="TelephoneRecordsMinigame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="Bg" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.996078, 0.996078, 0.996078, 1 )
+
+[node name="Page1" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Logo" type="ColorRect" parent="Page1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -499.0
+color = Color( 0.733333, 0.835294, 0.929412, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="Page1/Logo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="Text1" type="TextureRect" parent="Page1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -368.5
+margin_top = -171.5
+margin_right = 368.5
+margin_bottom = 27.5
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Text2" type="TextureRect" parent="Page1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -372.0
+margin_top = 30.0
+margin_right = 372.0
+margin_bottom = 274.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="btn_next" type="Button" parent="Page1"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -123.0
+margin_top = -101.0
+margin_right = -40.0
+margin_bottom = -24.0
+icon = ExtResource( 5 )
+flat = true
+expand_icon = true
+
+[node name="Page2" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Logo" type="ColorRect" parent="Page2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -499.0
+color = Color( 0.733333, 0.835294, 0.929412, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="Page2/Logo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="Text1" type="TextureRect" parent="Page2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -495.0
+margin_top = -142.0
+margin_right = -33.0
+margin_bottom = 193.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Text2" type="TextureRect" parent="Page2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.0
+margin_top = -138.0
+margin_right = 499.0
+margin_bottom = 218.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Grid" type="GridContainer" parent="Page2/Text2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 135.0
+margin_top = 71.0
+margin_right = -16.0
+margin_bottom = -25.0
+custom_constants/vseparation = 4
+custom_constants/hseparation = 4
+columns = 9
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="btn1" type="Button" parent="Page2/Text2/Grid"]
+margin_right = 40.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn2" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 44.0
+margin_right = 84.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn3" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 88.0
+margin_right = 128.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn4" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 132.0
+margin_right = 172.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn5" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 176.0
+margin_right = 216.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn6" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 220.0
+margin_right = 260.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn7" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 264.0
+margin_right = 304.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn8" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 308.0
+margin_right = 348.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn9" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 352.0
+margin_right = 392.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn10" type="Button" parent="Page2/Text2/Grid"]
+margin_top = 29.0
+margin_right = 40.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn11" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 44.0
+margin_top = 29.0
+margin_right = 84.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn12" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 88.0
+margin_top = 29.0
+margin_right = 128.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn13" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 132.0
+margin_top = 29.0
+margin_right = 172.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn14" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 176.0
+margin_top = 29.0
+margin_right = 216.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn15" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 220.0
+margin_top = 29.0
+margin_right = 260.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn16" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 264.0
+margin_top = 29.0
+margin_right = 304.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn17" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 308.0
+margin_top = 29.0
+margin_right = 348.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn18" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 352.0
+margin_top = 29.0
+margin_right = 392.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn19" type="Button" parent="Page2/Text2/Grid"]
+margin_top = 58.0
+margin_right = 40.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn20" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 44.0
+margin_top = 58.0
+margin_right = 84.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn21" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 88.0
+margin_top = 58.0
+margin_right = 128.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn22" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 132.0
+margin_top = 58.0
+margin_right = 172.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn23" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 176.0
+margin_top = 58.0
+margin_right = 216.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn24" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 220.0
+margin_top = 58.0
+margin_right = 260.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn25" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 264.0
+margin_top = 58.0
+margin_right = 304.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn26" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 308.0
+margin_top = 58.0
+margin_right = 348.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn27" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 352.0
+margin_top = 58.0
+margin_right = 392.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn28" type="Button" parent="Page2/Text2/Grid"]
+margin_top = 87.0
+margin_right = 40.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn29" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 44.0
+margin_top = 87.0
+margin_right = 84.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn30" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 88.0
+margin_top = 87.0
+margin_right = 128.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn31" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 132.0
+margin_top = 87.0
+margin_right = 172.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn32" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 176.0
+margin_top = 87.0
+margin_right = 216.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn33" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 220.0
+margin_top = 87.0
+margin_right = 260.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn34" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 264.0
+margin_top = 87.0
+margin_right = 304.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn35" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 308.0
+margin_top = 87.0
+margin_right = 348.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn36" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 352.0
+margin_top = 87.0
+margin_right = 392.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn37" type="Button" parent="Page2/Text2/Grid"]
+margin_top = 116.0
+margin_right = 40.0
+margin_bottom = 141.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn38" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 44.0
+margin_top = 116.0
+margin_right = 84.0
+margin_bottom = 141.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn39" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 88.0
+margin_top = 116.0
+margin_right = 128.0
+margin_bottom = 141.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn40" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 132.0
+margin_top = 116.0
+margin_right = 172.0
+margin_bottom = 141.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn41" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 176.0
+margin_top = 116.0
+margin_right = 216.0
+margin_bottom = 141.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn42" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 220.0
+margin_top = 116.0
+margin_right = 260.0
+margin_bottom = 141.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn43" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 264.0
+margin_top = 116.0
+margin_right = 304.0
+margin_bottom = 141.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn44" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 308.0
+margin_top = 116.0
+margin_right = 348.0
+margin_bottom = 141.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn45" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 352.0
+margin_top = 116.0
+margin_right = 392.0
+margin_bottom = 141.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn46" type="Button" parent="Page2/Text2/Grid"]
+margin_top = 145.0
+margin_right = 40.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn47" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 44.0
+margin_top = 145.0
+margin_right = 84.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn48" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 88.0
+margin_top = 145.0
+margin_right = 128.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn49" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 132.0
+margin_top = 145.0
+margin_right = 172.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn50" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 176.0
+margin_top = 145.0
+margin_right = 216.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn51" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 220.0
+margin_top = 145.0
+margin_right = 260.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn52" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 264.0
+margin_top = 145.0
+margin_right = 304.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn53" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 308.0
+margin_top = 145.0
+margin_right = 348.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn54" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 352.0
+margin_top = 145.0
+margin_right = 392.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn55" type="Button" parent="Page2/Text2/Grid"]
+margin_top = 174.0
+margin_right = 40.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn56" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 44.0
+margin_top = 174.0
+margin_right = 84.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn57" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 88.0
+margin_top = 174.0
+margin_right = 128.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn58" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 132.0
+margin_top = 174.0
+margin_right = 172.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn59" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 176.0
+margin_top = 174.0
+margin_right = 216.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn60" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 220.0
+margin_top = 174.0
+margin_right = 260.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn61" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 264.0
+margin_top = 174.0
+margin_right = 304.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn62" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 308.0
+margin_top = 174.0
+margin_right = 348.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn63" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 352.0
+margin_top = 174.0
+margin_right = 392.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn64" type="Button" parent="Page2/Text2/Grid"]
+margin_top = 203.0
+margin_right = 40.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn65" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 44.0
+margin_top = 203.0
+margin_right = 84.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn66" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 88.0
+margin_top = 203.0
+margin_right = 128.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn67" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 132.0
+margin_top = 203.0
+margin_right = 172.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn68" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 176.0
+margin_top = 203.0
+margin_right = 216.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn69" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 220.0
+margin_top = 203.0
+margin_right = 260.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn70" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 264.0
+margin_top = 203.0
+margin_right = 304.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn71" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 308.0
+margin_top = 203.0
+margin_right = 348.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn72" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 352.0
+margin_top = 203.0
+margin_right = 392.0
+margin_bottom = 228.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn73" type="Button" parent="Page2/Text2/Grid"]
+margin_top = 232.0
+margin_right = 40.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn74" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 44.0
+margin_top = 232.0
+margin_right = 84.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn75" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 88.0
+margin_top = 232.0
+margin_right = 128.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn76" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 132.0
+margin_top = 232.0
+margin_right = 172.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn77" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 176.0
+margin_top = 232.0
+margin_right = 216.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn78" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 220.0
+margin_top = 232.0
+margin_right = 260.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn79" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 264.0
+margin_top = 232.0
+margin_right = 304.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn80" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 308.0
+margin_top = 232.0
+margin_right = 348.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn81" type="Button" parent="Page2/Text2/Grid"]
+margin_left = 352.0
+margin_top = 232.0
+margin_right = 392.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 40, 24 )
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+flat = true
+expand_icon = true
+
+[node name="btn_back" type="Button" parent="Page2"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 122.0
+margin_top = -25.0
+margin_right = 205.0
+margin_bottom = 52.0
+rect_rotation = 180.0
+icon = ExtResource( 5 )
+flat = true
+expand_icon = true
+
+[node name="btn_ok" type="ColorRect" parent="Page2"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -173.0
+margin_top = -73.0
+margin_right = -30.0
+margin_bottom = -20.0
+color = Color( 0.352941, 0.607843, 0.835294, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="btn_ok" type="Button" parent="Page2/btn_ok"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "OK!"
+flat = true
+expand_icon = true
+
+[node name="Transition" parent="." instance=ExtResource( 9 )]
+visible = false
+color = Color( 0.119629, 0.199764, 0.273438, 1 )
