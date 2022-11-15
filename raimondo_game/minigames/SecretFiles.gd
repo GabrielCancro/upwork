@@ -33,7 +33,7 @@ func onSearchClick():
 	$SearchingRect/ResultCard.visible = false
 	$SearchingRect/Tween.interpolate_property($SearchingRect,"modulate",Color(1,1,1,0),Color(1,1,1,1),.3,Tween.TRANS_LINEAR,Tween.EASE_OUT)
 	$SearchingRect/Tween.start()
-	yield(get_tree().create_timer(3),"timeout")
+	yield(get_tree().create_timer(2),"timeout")
 	var val = $SearchPanel/LineEdit.text.to_upper().replace(" ","")
 	if(!val in CARDS): val = "NONE"
 	$SearchingRect/ResultCard/CardImage.texture = load(CARDS[val])

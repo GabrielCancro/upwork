@@ -34,7 +34,7 @@ anchor_bottom = 1.0
 [node name="Logo" type="ColorRect" parent="Page1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = -499.0
+margin_bottom = -591.0
 color = Color( 0.733333, 0.835294, 0.929412, 1 )
 __meta__ = {
 "_edit_group_": true
@@ -52,10 +52,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -368.5
-margin_top = -171.5
-margin_right = 368.5
-margin_bottom = 27.5
+margin_left = -421.0
+margin_top = -176.0
+margin_right = 421.0
+margin_bottom = 48.0
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
@@ -65,10 +65,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -372.0
-margin_top = 30.0
-margin_right = 372.0
-margin_bottom = 274.0
+margin_left = -414.0
+margin_top = 43.5
+margin_right = 414.0
+margin_bottom = 324.5
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
@@ -91,31 +91,15 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Logo" type="ColorRect" parent="Page2"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = -499.0
-color = Color( 0.733333, 0.835294, 0.929412, 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="TextureRect" type="TextureRect" parent="Page2/Logo"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 3 )
-expand = true
-stretch_mode = 6
-
 [node name="Text1" type="TextureRect" parent="Page2"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -495.0
-margin_top = -142.0
-margin_right = -33.0
-margin_bottom = 193.0
+margin_left = -597.0
+margin_top = -173.0
+margin_right = -60.0
+margin_bottom = 238.0
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
@@ -125,10 +109,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -45.0
-margin_top = -138.0
-margin_right = 499.0
-margin_bottom = 218.0
+margin_left = -65.0
+margin_top = -164.0
+margin_right = 599.0
+margin_bottom = 263.0
 texture = ExtResource( 7 )
 expand = true
 stretch_mode = 6
@@ -136,21 +120,21 @@ stretch_mode = 6
 [node name="Grid" type="GridContainer" parent="Page2/Text2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 135.0
-margin_top = 71.0
-margin_right = -16.0
-margin_bottom = -25.0
-custom_constants/vseparation = 4
-custom_constants/hseparation = 4
+margin_left = 166.0
+margin_top = 85.0
+margin_right = 15.0
+margin_bottom = -11.0
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
 columns = 9
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="btn1" type="Button" parent="Page2/Text2/Grid"]
-margin_right = 40.0
+margin_right = 44.0
 margin_bottom = 25.0
-rect_min_size = Vector2( 40, 24 )
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -162,10 +146,10 @@ flat = true
 expand_icon = true
 
 [node name="btn2" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 44.0
-margin_right = 84.0
+margin_left = 54.0
+margin_right = 98.0
 margin_bottom = 25.0
-rect_min_size = Vector2( 40, 24 )
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -177,10 +161,10 @@ flat = true
 expand_icon = true
 
 [node name="btn3" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 88.0
-margin_right = 128.0
+margin_left = 108.0
+margin_right = 152.0
 margin_bottom = 25.0
-rect_min_size = Vector2( 40, 24 )
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -192,10 +176,10 @@ flat = true
 expand_icon = true
 
 [node name="btn4" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 132.0
-margin_right = 172.0
+margin_left = 162.0
+margin_right = 206.0
 margin_bottom = 25.0
-rect_min_size = Vector2( 40, 24 )
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -207,10 +191,10 @@ flat = true
 expand_icon = true
 
 [node name="btn5" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 176.0
-margin_right = 216.0
+margin_left = 216.0
+margin_right = 260.0
 margin_bottom = 25.0
-rect_min_size = Vector2( 40, 24 )
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -223,10 +207,10 @@ flat = true
 expand_icon = true
 
 [node name="btn6" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 220.0
-margin_right = 260.0
+margin_left = 270.0
+margin_right = 314.0
 margin_bottom = 25.0
-rect_min_size = Vector2( 40, 24 )
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -238,10 +222,10 @@ flat = true
 expand_icon = true
 
 [node name="btn7" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 264.0
-margin_right = 304.0
+margin_left = 324.0
+margin_right = 368.0
 margin_bottom = 25.0
-rect_min_size = Vector2( 40, 24 )
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -253,10 +237,10 @@ flat = true
 expand_icon = true
 
 [node name="btn8" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 308.0
-margin_right = 348.0
+margin_left = 378.0
+margin_right = 422.0
 margin_bottom = 25.0
-rect_min_size = Vector2( 40, 24 )
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -268,10 +252,10 @@ flat = true
 expand_icon = true
 
 [node name="btn9" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 352.0
-margin_right = 392.0
+margin_left = 432.0
+margin_right = 476.0
 margin_bottom = 25.0
-rect_min_size = Vector2( 40, 24 )
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -283,10 +267,10 @@ flat = true
 expand_icon = true
 
 [node name="btn10" type="Button" parent="Page2/Text2/Grid"]
-margin_top = 29.0
-margin_right = 40.0
-margin_bottom = 54.0
-rect_min_size = Vector2( 40, 24 )
+margin_top = 35.0
+margin_right = 44.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -298,11 +282,11 @@ flat = true
 expand_icon = true
 
 [node name="btn11" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 44.0
-margin_top = 29.0
-margin_right = 84.0
-margin_bottom = 54.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 54.0
+margin_top = 35.0
+margin_right = 98.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -314,11 +298,11 @@ flat = true
 expand_icon = true
 
 [node name="btn12" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 88.0
-margin_top = 29.0
-margin_right = 128.0
-margin_bottom = 54.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 108.0
+margin_top = 35.0
+margin_right = 152.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -330,11 +314,11 @@ flat = true
 expand_icon = true
 
 [node name="btn13" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 132.0
-margin_top = 29.0
-margin_right = 172.0
-margin_bottom = 54.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 162.0
+margin_top = 35.0
+margin_right = 206.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -346,11 +330,11 @@ flat = true
 expand_icon = true
 
 [node name="btn14" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 176.0
-margin_top = 29.0
-margin_right = 216.0
-margin_bottom = 54.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 216.0
+margin_top = 35.0
+margin_right = 260.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -362,11 +346,11 @@ flat = true
 expand_icon = true
 
 [node name="btn15" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 220.0
-margin_top = 29.0
-margin_right = 260.0
-margin_bottom = 54.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 270.0
+margin_top = 35.0
+margin_right = 314.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -378,11 +362,11 @@ flat = true
 expand_icon = true
 
 [node name="btn16" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 264.0
-margin_top = 29.0
-margin_right = 304.0
-margin_bottom = 54.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 324.0
+margin_top = 35.0
+margin_right = 368.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -394,11 +378,11 @@ flat = true
 expand_icon = true
 
 [node name="btn17" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 308.0
-margin_top = 29.0
-margin_right = 348.0
-margin_bottom = 54.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 378.0
+margin_top = 35.0
+margin_right = 422.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -410,11 +394,11 @@ flat = true
 expand_icon = true
 
 [node name="btn18" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 352.0
-margin_top = 29.0
-margin_right = 392.0
-margin_bottom = 54.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 432.0
+margin_top = 35.0
+margin_right = 476.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -426,10 +410,10 @@ flat = true
 expand_icon = true
 
 [node name="btn19" type="Button" parent="Page2/Text2/Grid"]
-margin_top = 58.0
-margin_right = 40.0
-margin_bottom = 83.0
-rect_min_size = Vector2( 40, 24 )
+margin_top = 70.0
+margin_right = 44.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -441,11 +425,11 @@ flat = true
 expand_icon = true
 
 [node name="btn20" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 44.0
-margin_top = 58.0
-margin_right = 84.0
-margin_bottom = 83.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 54.0
+margin_top = 70.0
+margin_right = 98.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -457,11 +441,11 @@ flat = true
 expand_icon = true
 
 [node name="btn21" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 88.0
-margin_top = 58.0
-margin_right = 128.0
-margin_bottom = 83.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 108.0
+margin_top = 70.0
+margin_right = 152.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -473,11 +457,11 @@ flat = true
 expand_icon = true
 
 [node name="btn22" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 132.0
-margin_top = 58.0
-margin_right = 172.0
-margin_bottom = 83.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 162.0
+margin_top = 70.0
+margin_right = 206.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -489,11 +473,11 @@ flat = true
 expand_icon = true
 
 [node name="btn23" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 176.0
-margin_top = 58.0
-margin_right = 216.0
-margin_bottom = 83.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 216.0
+margin_top = 70.0
+margin_right = 260.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -505,11 +489,11 @@ flat = true
 expand_icon = true
 
 [node name="btn24" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 220.0
-margin_top = 58.0
-margin_right = 260.0
-margin_bottom = 83.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 270.0
+margin_top = 70.0
+margin_right = 314.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -521,11 +505,11 @@ flat = true
 expand_icon = true
 
 [node name="btn25" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 264.0
-margin_top = 58.0
-margin_right = 304.0
-margin_bottom = 83.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 324.0
+margin_top = 70.0
+margin_right = 368.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -537,11 +521,11 @@ flat = true
 expand_icon = true
 
 [node name="btn26" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 308.0
-margin_top = 58.0
-margin_right = 348.0
-margin_bottom = 83.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 378.0
+margin_top = 70.0
+margin_right = 422.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -554,11 +538,11 @@ flat = true
 expand_icon = true
 
 [node name="btn27" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 352.0
-margin_top = 58.0
-margin_right = 392.0
-margin_bottom = 83.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 432.0
+margin_top = 70.0
+margin_right = 476.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -570,10 +554,10 @@ flat = true
 expand_icon = true
 
 [node name="btn28" type="Button" parent="Page2/Text2/Grid"]
-margin_top = 87.0
-margin_right = 40.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 40, 24 )
+margin_top = 105.0
+margin_right = 44.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -585,11 +569,11 @@ flat = true
 expand_icon = true
 
 [node name="btn29" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 44.0
-margin_top = 87.0
-margin_right = 84.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 54.0
+margin_top = 105.0
+margin_right = 98.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -601,11 +585,11 @@ flat = true
 expand_icon = true
 
 [node name="btn30" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 88.0
-margin_top = 87.0
-margin_right = 128.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 108.0
+margin_top = 105.0
+margin_right = 152.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -617,11 +601,11 @@ flat = true
 expand_icon = true
 
 [node name="btn31" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 132.0
-margin_top = 87.0
-margin_right = 172.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 162.0
+margin_top = 105.0
+margin_right = 206.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -634,11 +618,11 @@ flat = true
 expand_icon = true
 
 [node name="btn32" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 176.0
-margin_top = 87.0
-margin_right = 216.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 216.0
+margin_top = 105.0
+margin_right = 260.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -650,11 +634,11 @@ flat = true
 expand_icon = true
 
 [node name="btn33" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 220.0
-margin_top = 87.0
-margin_right = 260.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 270.0
+margin_top = 105.0
+margin_right = 314.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -666,11 +650,11 @@ flat = true
 expand_icon = true
 
 [node name="btn34" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 264.0
-margin_top = 87.0
-margin_right = 304.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 324.0
+margin_top = 105.0
+margin_right = 368.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -682,11 +666,11 @@ flat = true
 expand_icon = true
 
 [node name="btn35" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 308.0
-margin_top = 87.0
-margin_right = 348.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 378.0
+margin_top = 105.0
+margin_right = 422.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -698,11 +682,11 @@ flat = true
 expand_icon = true
 
 [node name="btn36" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 352.0
-margin_top = 87.0
-margin_right = 392.0
-margin_bottom = 112.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 432.0
+margin_top = 105.0
+margin_right = 476.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -714,10 +698,10 @@ flat = true
 expand_icon = true
 
 [node name="btn37" type="Button" parent="Page2/Text2/Grid"]
-margin_top = 116.0
-margin_right = 40.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 40, 24 )
+margin_top = 140.0
+margin_right = 44.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -729,11 +713,11 @@ flat = true
 expand_icon = true
 
 [node name="btn38" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 44.0
-margin_top = 116.0
-margin_right = 84.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 54.0
+margin_top = 140.0
+margin_right = 98.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -745,11 +729,11 @@ flat = true
 expand_icon = true
 
 [node name="btn39" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 88.0
-margin_top = 116.0
-margin_right = 128.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 108.0
+margin_top = 140.0
+margin_right = 152.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -761,11 +745,11 @@ flat = true
 expand_icon = true
 
 [node name="btn40" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 132.0
-margin_top = 116.0
-margin_right = 172.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 162.0
+margin_top = 140.0
+margin_right = 206.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -777,11 +761,11 @@ flat = true
 expand_icon = true
 
 [node name="btn41" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 176.0
-margin_top = 116.0
-margin_right = 216.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 216.0
+margin_top = 140.0
+margin_right = 260.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -793,11 +777,11 @@ flat = true
 expand_icon = true
 
 [node name="btn42" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 220.0
-margin_top = 116.0
-margin_right = 260.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 270.0
+margin_top = 140.0
+margin_right = 314.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -809,11 +793,11 @@ flat = true
 expand_icon = true
 
 [node name="btn43" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 264.0
-margin_top = 116.0
-margin_right = 304.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 324.0
+margin_top = 140.0
+margin_right = 368.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -825,11 +809,11 @@ flat = true
 expand_icon = true
 
 [node name="btn44" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 308.0
-margin_top = 116.0
-margin_right = 348.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 378.0
+margin_top = 140.0
+margin_right = 422.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -841,11 +825,11 @@ flat = true
 expand_icon = true
 
 [node name="btn45" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 352.0
-margin_top = 116.0
-margin_right = 392.0
-margin_bottom = 141.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 432.0
+margin_top = 140.0
+margin_right = 476.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -858,10 +842,10 @@ flat = true
 expand_icon = true
 
 [node name="btn46" type="Button" parent="Page2/Text2/Grid"]
-margin_top = 145.0
-margin_right = 40.0
-margin_bottom = 170.0
-rect_min_size = Vector2( 40, 24 )
+margin_top = 175.0
+margin_right = 44.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -873,11 +857,11 @@ flat = true
 expand_icon = true
 
 [node name="btn47" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 44.0
-margin_top = 145.0
-margin_right = 84.0
-margin_bottom = 170.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 54.0
+margin_top = 175.0
+margin_right = 98.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -890,11 +874,11 @@ flat = true
 expand_icon = true
 
 [node name="btn48" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 88.0
-margin_top = 145.0
-margin_right = 128.0
-margin_bottom = 170.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 108.0
+margin_top = 175.0
+margin_right = 152.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -906,11 +890,11 @@ flat = true
 expand_icon = true
 
 [node name="btn49" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 132.0
-margin_top = 145.0
-margin_right = 172.0
-margin_bottom = 170.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 162.0
+margin_top = 175.0
+margin_right = 206.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -922,11 +906,11 @@ flat = true
 expand_icon = true
 
 [node name="btn50" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 176.0
-margin_top = 145.0
-margin_right = 216.0
-margin_bottom = 170.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 216.0
+margin_top = 175.0
+margin_right = 260.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -938,11 +922,11 @@ flat = true
 expand_icon = true
 
 [node name="btn51" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 220.0
-margin_top = 145.0
-margin_right = 260.0
-margin_bottom = 170.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 270.0
+margin_top = 175.0
+margin_right = 314.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -954,11 +938,11 @@ flat = true
 expand_icon = true
 
 [node name="btn52" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 264.0
-margin_top = 145.0
-margin_right = 304.0
-margin_bottom = 170.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 324.0
+margin_top = 175.0
+margin_right = 368.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -970,11 +954,11 @@ flat = true
 expand_icon = true
 
 [node name="btn53" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 308.0
-margin_top = 145.0
-margin_right = 348.0
-margin_bottom = 170.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 378.0
+margin_top = 175.0
+margin_right = 422.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -986,11 +970,11 @@ flat = true
 expand_icon = true
 
 [node name="btn54" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 352.0
-margin_top = 145.0
-margin_right = 392.0
-margin_bottom = 170.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 432.0
+margin_top = 175.0
+margin_right = 476.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1002,10 +986,10 @@ flat = true
 expand_icon = true
 
 [node name="btn55" type="Button" parent="Page2/Text2/Grid"]
-margin_top = 174.0
-margin_right = 40.0
-margin_bottom = 199.0
-rect_min_size = Vector2( 40, 24 )
+margin_top = 210.0
+margin_right = 44.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1017,11 +1001,11 @@ flat = true
 expand_icon = true
 
 [node name="btn56" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 44.0
-margin_top = 174.0
-margin_right = 84.0
-margin_bottom = 199.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 54.0
+margin_top = 210.0
+margin_right = 98.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1033,11 +1017,11 @@ flat = true
 expand_icon = true
 
 [node name="btn57" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 88.0
-margin_top = 174.0
-margin_right = 128.0
-margin_bottom = 199.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 108.0
+margin_top = 210.0
+margin_right = 152.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1049,11 +1033,11 @@ flat = true
 expand_icon = true
 
 [node name="btn58" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 132.0
-margin_top = 174.0
-margin_right = 172.0
-margin_bottom = 199.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 162.0
+margin_top = 210.0
+margin_right = 206.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1065,11 +1049,11 @@ flat = true
 expand_icon = true
 
 [node name="btn59" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 176.0
-margin_top = 174.0
-margin_right = 216.0
-margin_bottom = 199.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 216.0
+margin_top = 210.0
+margin_right = 260.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1081,11 +1065,11 @@ flat = true
 expand_icon = true
 
 [node name="btn60" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 220.0
-margin_top = 174.0
-margin_right = 260.0
-margin_bottom = 199.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 270.0
+margin_top = 210.0
+margin_right = 314.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1098,11 +1082,11 @@ flat = true
 expand_icon = true
 
 [node name="btn61" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 264.0
-margin_top = 174.0
-margin_right = 304.0
-margin_bottom = 199.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 324.0
+margin_top = 210.0
+margin_right = 368.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1114,11 +1098,11 @@ flat = true
 expand_icon = true
 
 [node name="btn62" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 308.0
-margin_top = 174.0
-margin_right = 348.0
-margin_bottom = 199.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 378.0
+margin_top = 210.0
+margin_right = 422.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1130,11 +1114,11 @@ flat = true
 expand_icon = true
 
 [node name="btn63" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 352.0
-margin_top = 174.0
-margin_right = 392.0
-margin_bottom = 199.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 432.0
+margin_top = 210.0
+margin_right = 476.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1146,10 +1130,10 @@ flat = true
 expand_icon = true
 
 [node name="btn64" type="Button" parent="Page2/Text2/Grid"]
-margin_top = 203.0
-margin_right = 40.0
-margin_bottom = 228.0
-rect_min_size = Vector2( 40, 24 )
+margin_top = 245.0
+margin_right = 44.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1161,11 +1145,11 @@ flat = true
 expand_icon = true
 
 [node name="btn65" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 44.0
-margin_top = 203.0
-margin_right = 84.0
-margin_bottom = 228.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 54.0
+margin_top = 245.0
+margin_right = 98.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1177,11 +1161,11 @@ flat = true
 expand_icon = true
 
 [node name="btn66" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 88.0
-margin_top = 203.0
-margin_right = 128.0
-margin_bottom = 228.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 108.0
+margin_top = 245.0
+margin_right = 152.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1194,11 +1178,11 @@ flat = true
 expand_icon = true
 
 [node name="btn67" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 132.0
-margin_top = 203.0
-margin_right = 172.0
-margin_bottom = 228.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 162.0
+margin_top = 245.0
+margin_right = 206.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1210,11 +1194,11 @@ flat = true
 expand_icon = true
 
 [node name="btn68" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 176.0
-margin_top = 203.0
-margin_right = 216.0
-margin_bottom = 228.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 216.0
+margin_top = 245.0
+margin_right = 260.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1226,11 +1210,11 @@ flat = true
 expand_icon = true
 
 [node name="btn69" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 220.0
-margin_top = 203.0
-margin_right = 260.0
-margin_bottom = 228.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 270.0
+margin_top = 245.0
+margin_right = 314.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1242,11 +1226,11 @@ flat = true
 expand_icon = true
 
 [node name="btn70" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 264.0
-margin_top = 203.0
-margin_right = 304.0
-margin_bottom = 228.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 324.0
+margin_top = 245.0
+margin_right = 368.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1258,11 +1242,11 @@ flat = true
 expand_icon = true
 
 [node name="btn71" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 308.0
-margin_top = 203.0
-margin_right = 348.0
-margin_bottom = 228.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 378.0
+margin_top = 245.0
+margin_right = 422.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1274,11 +1258,11 @@ flat = true
 expand_icon = true
 
 [node name="btn72" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 352.0
-margin_top = 203.0
-margin_right = 392.0
-margin_bottom = 228.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 432.0
+margin_top = 245.0
+margin_right = 476.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1290,10 +1274,10 @@ flat = true
 expand_icon = true
 
 [node name="btn73" type="Button" parent="Page2/Text2/Grid"]
-margin_top = 232.0
-margin_right = 40.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 40, 24 )
+margin_top = 280.0
+margin_right = 44.0
+margin_bottom = 305.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1305,11 +1289,11 @@ flat = true
 expand_icon = true
 
 [node name="btn74" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 44.0
-margin_top = 232.0
-margin_right = 84.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 54.0
+margin_top = 280.0
+margin_right = 98.0
+margin_bottom = 305.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1321,11 +1305,11 @@ flat = true
 expand_icon = true
 
 [node name="btn75" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 88.0
-margin_top = 232.0
-margin_right = 128.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 108.0
+margin_top = 280.0
+margin_right = 152.0
+margin_bottom = 305.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1337,11 +1321,11 @@ flat = true
 expand_icon = true
 
 [node name="btn76" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 132.0
-margin_top = 232.0
-margin_right = 172.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 162.0
+margin_top = 280.0
+margin_right = 206.0
+margin_bottom = 305.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1353,11 +1337,11 @@ flat = true
 expand_icon = true
 
 [node name="btn77" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 176.0
-margin_top = 232.0
-margin_right = 216.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 216.0
+margin_top = 280.0
+margin_right = 260.0
+margin_bottom = 305.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1369,11 +1353,11 @@ flat = true
 expand_icon = true
 
 [node name="btn78" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 220.0
-margin_top = 232.0
-margin_right = 260.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 270.0
+margin_top = 280.0
+margin_right = 314.0
+margin_bottom = 305.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1385,11 +1369,11 @@ flat = true
 expand_icon = true
 
 [node name="btn79" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 264.0
-margin_top = 232.0
-margin_right = 304.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 324.0
+margin_top = 280.0
+margin_right = 368.0
+margin_bottom = 305.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1402,11 +1386,11 @@ flat = true
 expand_icon = true
 
 [node name="btn80" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 308.0
-margin_top = 232.0
-margin_right = 348.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 378.0
+margin_top = 280.0
+margin_right = 422.0
+margin_bottom = 305.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1418,11 +1402,11 @@ flat = true
 expand_icon = true
 
 [node name="btn81" type="Button" parent="Page2/Text2/Grid"]
-margin_left = 352.0
-margin_top = 232.0
-margin_right = 392.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 40, 24 )
+margin_left = 432.0
+margin_top = 280.0
+margin_right = 476.0
+margin_bottom = 305.0
+rect_min_size = Vector2( 44, 25 )
 focus_mode = 0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -1460,10 +1444,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -173.0
-margin_top = -73.0
-margin_right = -30.0
-margin_bottom = -20.0
+margin_left = -181.0
+margin_top = -89.0
+margin_right = -38.0
+margin_bottom = -36.0
 color = Color( 0.352941, 0.607843, 0.835294, 1 )
 __meta__ = {
 "_edit_group_": true
@@ -1476,6 +1460,22 @@ custom_fonts/font = SubResource( 2 )
 text = "SEARCH"
 flat = true
 expand_icon = true
+
+[node name="Logo" type="ColorRect" parent="Page2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -591.0
+color = Color( 0.733333, 0.835294, 0.929412, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="Page2/Logo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
 
 [node name="Transition" parent="." instance=ExtResource( 9 )]
 visible = false
