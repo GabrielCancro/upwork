@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sim_tx1.png-90b7e85b8125997e3f918d04d2afe3c5.stex"
+path="res://.import/codice_alfa.jpg-9dbfbd807af0fb1bf4a6ac4f9ba8cda3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sim_tx1.png"
-dest_files=[ "res://.import/sim_tx1.png-90b7e85b8125997e3f918d04d2afe3c5.stex" ]
+source_file="res://assets/phone_records/codice_alfa.jpg"
+dest_files=[ "res://.import/codice_alfa.jpg-9dbfbd807af0fb1bf4a6ac4f9ba8cda3.stex" ]
 
 [params]
 
