@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/phone_records/Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/fonts/24pts.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/secret_files_game1/files/CRISTIANOCATENA.png" type="Texture" id=3]
+[ext_resource path="res://nodes/SearchingRect.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=2]
+size = 43
+font_data = ExtResource( 1 )
+
+[node name="SearchingRect" type="ColorRect"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.32549, 0.32549, 0.32549, 0.937255 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SearchingLabel" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -167.5
+margin_top = -39.0
+margin_right = 167.5
+margin_bottom = 7.0
+color = Color( 0.219608, 0.0823529, 0.0823529, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="SearchingLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 2 )
+text = "ALLA RICERCA DI DATI..."
+align = 1
+valign = 1
+
+[node name="ResultCard" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -427.0
+margin_top = -264.5
+margin_right = 427.0
+margin_bottom = 264.5
+color = Color( 0.0196078, 0.192157, 0.254902, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CardImage" type="TextureRect" parent="ResultCard"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -378.0
+margin_top = -242.5
+margin_right = 378.0
+margin_bottom = 242.5
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="btn_close_card" type="Button" parent="ResultCard"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -59.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 2 )
+text = "X"
+expand_icon = true
+
+[node name="Tween" type="Tween" parent="."]
