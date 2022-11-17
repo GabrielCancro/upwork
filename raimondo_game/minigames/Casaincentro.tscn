@@ -5,7 +5,6 @@
 [ext_resource path="res://minigames/Casaincentro.gd" type="Script" id=3]
 [ext_resource path="res://assets/casa_in_centro/logo_casaincentro.png" type="Texture" id=4]
 [ext_resource path="res://assets/phone_records/Roboto-Regular.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://nodes/SearchingRect.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Logo_shine"
@@ -33,6 +32,10 @@ font_data = ExtResource( 5 )
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = ExtResource( 5 )
+
 [node name="Casaincentro" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -56,12 +59,10 @@ margin_bottom = 355.0
 focus_mode = 1
 theme = ExtResource( 2 )
 scroll_horizontal_enabled = false
-scroll_vertical = 100
 
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
-margin_top = -100.0
 margin_right = 1240.0
-margin_bottom = 1655.0
+margin_bottom = 1755.0
 rect_min_size = Vector2( 1230, 680 )
 texture = ExtResource( 1 )
 
@@ -96,4 +97,25 @@ custom_styles/normal = SubResource( 5 )
 placeholder_text = "Nome e Cognome"
 placeholder_alpha = 0.3
 
-[node name="SearchingRect" parent="." instance=ExtResource( 6 )]
+[node name="btn_search" type="ColorRect" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -206.0
+margin_top = -78.0
+margin_right = -54.0
+margin_bottom = -20.0
+color = Color( 0.403922, 0.490196, 0.776471, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="btn_search" type="Button" parent="btn_search"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 6 )
+text = "SEARCH"
+flat = true
+expand_icon = true

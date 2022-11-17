@@ -25,17 +25,21 @@ var CARDS = {
 	"VECCHIOEBELLO": "res://assets/secret_files_game1/files/VECCHIOEBELLO.png",
 	"NONE": "res://assets/secret_files_game1/files/Nontrovato.png",
 }
+var CORRECT_NAME = "CRISTIANOCATENA"
 
 signal on_close_card
 
 func _ready():
 	$ResultCard/btn_close_card.connect("button_down",self,"onCloseCardClick")
+	$ResultCard/btn_contact.connect("button_down",self,"onContactClick")
+	visible = false
 
 func searchAndShowCard(val):
 	val = val.to_upper().replace(" ","")
 	if(!val in CARDS): val = "NONE"
 	visible = true
 	modulate.a = 0
+	$ResultCard/btn_contact.visible = (val==CORRECT_NAME)
 	$ResultCard.visible = false
 	$Tween.interpolate_property(self,"modulate",Color(1,1,1,0),Color(1,1,1,1),.3,Tween.TRANS_LINEAR,Tween.EASE_OUT)
 	$Tween.start()
@@ -49,3 +53,6 @@ func searchAndShowCard(val):
 func onCloseCardClick():
 	emit_signal("on_close_card")
 	visible = false
+
+func onContactClick():
+	get_tree().change_scene("res://Main.tscn")

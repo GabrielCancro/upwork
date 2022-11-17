@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AF438TZ.png-cb773963166a6ea32a8267911f0d3baf.stex"
+path="res://.import/AF438TZ.PNG-0708bcb377b96ba72a0f5571e6eeecb5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/secret_files_game1/files/AF438TZ.png"
-dest_files=[ "res://.import/AF438TZ.png-cb773963166a6ea32a8267911f0d3baf.stex" ]
+source_file="res://assets/secret_files_game1/files/AF438TZ.PNG"
+dest_files=[ "res://.import/AF438TZ.PNG-0708bcb377b96ba72a0f5571e6eeecb5.stex" ]
 
 [params]
 

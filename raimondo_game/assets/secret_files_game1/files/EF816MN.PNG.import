@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EF816MN.png-fc25bfa919805f826f114ad3cab2a059.stex"
+path="res://.import/EF816MN.PNG-081147f0c8e39b832409c14a4f7f59ec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/secret_files_game1/files/EF816MN.png"
-dest_files=[ "res://.import/EF816MN.png-fc25bfa919805f826f114ad3cab2a059.stex" ]
+source_file="res://assets/secret_files_game1/files/EF816MN.PNG"
+dest_files=[ "res://.import/EF816MN.PNG-081147f0c8e39b832409c14a4f7f59ec.stex" ]
 
 [params]
 
