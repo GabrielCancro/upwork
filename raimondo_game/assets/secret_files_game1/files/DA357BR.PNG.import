@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DA357BR.PNG-a4a3295d2c5ce312f32c45d8f718f475.stex"
+path="res://.import/DA357BR.png-b1a5487b462da5cde003e4786a58a930.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/secret_files_game1/files/DA357BR.PNG"
-dest_files=[ "res://.import/DA357BR.PNG-a4a3295d2c5ce312f32c45d8f718f475.stex" ]
+source_file="res://assets/secret_files_game1/files/DA357BR.png"
+dest_files=[ "res://.import/DA357BR.png-b1a5487b462da5cde003e4786a58a930.stex" ]
 
 [params]
 

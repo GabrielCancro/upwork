@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MARTALONGO.PNG-ff5cb389d7ed12aa3ac179a1a4eaa5a8.stex"
+path="res://.import/MARTALONGO.png-ccab6f5a25b9b6c4e65c29781846b64f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/secret_files_game1/files/MARTALONGO.PNG"
-dest_files=[ "res://.import/MARTALONGO.PNG-ff5cb389d7ed12aa3ac179a1a4eaa5a8.stex" ]
+source_file="res://assets/secret_files_game1/files/MARTALONGO.png"
+dest_files=[ "res://.import/MARTALONGO.png-ccab6f5a25b9b6c4e65c29781846b64f.stex" ]
 
 [params]
 
