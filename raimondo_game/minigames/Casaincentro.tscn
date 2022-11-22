@@ -99,14 +99,14 @@ placeholder_alpha = 0.3
 
 [node name="btn_search" type="ColorRect" parent="."]
 visible = false
-anchor_left = 1.0
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -206.0
-margin_top = -78.0
-margin_right = -54.0
-margin_bottom = -20.0
+margin_left = 428.0
+margin_top = -82.0
+margin_right = 580.0
+margin_bottom = -24.0
 color = Color( 0.403922, 0.490196, 0.776471, 1 )
 __meta__ = {
 "_edit_group_": true

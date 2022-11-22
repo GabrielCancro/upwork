@@ -74,13 +74,13 @@ expand = true
 stretch_mode = 6
 
 [node name="btn_next" type="Button" parent="Page1"]
-anchor_left = 1.0
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -123.0
+margin_left = 526.5
 margin_top = -101.0
-margin_right = -40.0
+margin_right = 609.5
 margin_bottom = -24.0
 icon = ExtResource( 5 )
 flat = true
@@ -1427,12 +1427,14 @@ __meta__ = {
 }
 
 [node name="btn_back" type="Button" parent="Page2"]
+anchor_left = 0.5
 anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 122.0
-margin_top = -25.0
-margin_right = 205.0
-margin_bottom = 52.0
+margin_left = -529.5
+margin_top = -21.0
+margin_right = -446.5
+margin_bottom = 56.0
 rect_rotation = 180.0
 icon = ExtResource( 5 )
 flat = true
@@ -1440,14 +1442,14 @@ expand_icon = true
 
 [node name="btn_search" type="ColorRect" parent="Page2"]
 visible = false
-anchor_left = 1.0
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -181.0
-margin_top = -89.0
-margin_right = -38.0
-margin_bottom = -36.0
+margin_left = 456.5
+margin_top = -85.0
+margin_right = 599.5
+margin_bottom = -32.0
 color = Color( 0.352941, 0.607843, 0.835294, 1 )
 __meta__ = {
 "_edit_group_": true
