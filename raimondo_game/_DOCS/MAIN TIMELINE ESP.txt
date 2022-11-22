@@ -1,0 +1,67 @@
+Como puede ver, la plantilla es muy similar a nuestro proyecto. Asi que:
+- pantalla de bienvenida (créditos), etc.
+- pantalla (fondo para hacer) con el texto en el que se puede hacer clic: "Pronto a metterti alla prova nei panni di un vero detective? Per iniziare Clicca qui". El video se puede omitir.
+- una vez que se hace clic, comienza un video
+- una vez que el video se detiene, otra pantalla con un texto en el que se puede hacer clic "Avvia la presentazione del caso da risolvere". El video se puede omitir o el usuario puede revisarlo (por lo que algunos controles (adelante, atrás, etc.) pueden ser útiles)
+- una vez hecho clic,
+- menú principal con opciones (el fondo se cambiará una vez que esté listo)
+- comienza el juego: se reproducirá un video. Al final del video, un usuario puede elegir 4 opciones (menú 1):
+1- Chiedi un consulto al medico legale
+2- Approfondisci informazioni della polizia Scientifica
+3- Interroga la moglie
+4- Interroga el mecánico
+
+si un usuario hace clic en 1: suena un teléfono, luego un texto: "Il commissario chiede se può fare domande aggiuntive, il medico risponde in maniera sgarbata che ha già fornito tutte le informazioni che aveva, parlando con lui rischia solo di perdere tempo e in un'indagine il tempo è prezioso"
+Luego se mostrará el menú 1
+
+
+
+si un usuario hace clic en 2: texto: "Chiamare la Scientifica ha richiesto tempo ma non abbiamo ottenuto nessuna informazione aggiuntiva.", entonces menu1
+
+
+
+si un usuario hace clic en 3: comienza un video "LILIANA BRUNO VIDEOCALL SALOTTO". Al final del video Menu2
+
+
+
+si el usuario hace clic4: video "MANUEL ORTEGA VIDECALL OFFICINA", luego menú2
+
+
+
+al final del video ORTEGA, pantalla (fondo a hacer) con texto: "Come vuoi procedere ora" luego menu2 ->
+
+1 - Chiedi i tabulati telefonici della vittima (se è stato scelto video meccanico)o richiedi la proposta di acquisto (se è stata scelto il video della moglie)
+2-interroga moglie
+3- Fai un sopralluogo sulla scena del crimine
+4- Chiedi un consulto al medico legale
+
+
+
+opción 1, menú 2 -> primer minijuego
+opción2, menú2 -> si en el menú 1 el usuario elige 2, comienza el video de Liliana (moglie) o Ortega (meccanico).
+opción 3, menú 2 -> pantalla con el texto "Fare il sopralluogo ha richiesto tempo ma non abbiamo ottenuto nessuna informazione aggiuntiva"
+
+
+
+al final del video LILIANA, pantalla (fondo a hacer) con texto: "Come vuoi procedere ora" luego menu3 ->
+
+
+
+1 - Chiedi i tabulati telefonici della vittima (se è stato scelto video meccanico)o richiedi la proposta di acquisto (se è stata scelto il video della moglie)
+2-interroga moglie
+3- Fai un sopralluogo sulla scena del crimine
+4- Chiedi un consulto al medico legale-> : suena un teléfono, luego un texto: "Il commissario chiede se può fare domande aggiuntive, il medico risponde in maniera sgarbata che ha già fornito tutte le informazioni che aveva, parlando con lui rischia solo di perdere tempo e in un'indagine il tempo è prezioso" luego menu1
+
+opción 1, menú 3 -> segundo minijuego
+opción2, menú3 -> si en el menú 1 el usuario elige 2, comienza el video de Liliana (moglie) o Ortega (meccanico).
+opción 3, menú 3 -> pantalla con el texto "Fare il sopralluogo ha richiesto tempo ma non abbiamo ottenuto nessuna informazione aggiuntiva"
+opción 4, menú 3 -> : suena un teléfono, luego un texto: "Il commissario chiede se può fare domande aggiuntive, il medico risponde in maniera sgarbata che ha già fornito tutte le informazioni che aveva, parlando con lui rischia solo di perdere tempo e in un'indagine il tempo è prezioso" luego menu1
+
+
+
+al final del mini juego 1, el menú 2 tiene otra opción "interroga Catena"
+al final del mini juego 1, el menú 3 tiene otra opción "interroga a Green"
+
+
+
+Luego, si hace clic en la nueva opción, aparece la pantalla "finalizar".
