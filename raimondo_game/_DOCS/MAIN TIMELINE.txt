@@ -1,0 +1,79 @@
+22/11
+The Main game is a remake of EgoVenture Sample Game, from the Godot's sample directory
+I'm uploading all the modified game and assets on Google Drive. Please can you share you email to communicate only tech questions via slack?
+
+----------------
+
+As you can see, the template is really similar to our project. So:
+- splash screen (credits) etc
+- screen (background to do) with the clickable text: "Pronto a metterti alla prova nei panni di un vero detective? Per iniziare Clicca qui". The video can be skippable.
+- once clicked, a video start
+- once the video stops, another screen with a clickable text "Avvia la presentazione del caso da risolvere". The video can be skippable or the user can review it (so some controls - forward- back etc - can be usefulls)
+- once clicked,
+- main menu with options (the background will be changed once ready)
+- the game starts: a video will play. At the end of the video, a user can choose 4 options (menu 1):
+1- Chiedi un consulto al medico legale
+2- Approfondisci informazioni della polizia scientifica
+3- Interroga la moglie
+4- Interroga il meccanico
+
+
+
+if a user clicks 1: a telephone rings, then a text: "Il commissario chiede se può fare domande aggiuntive, il medico risponde in maniera sgarbata che ha già fornito tutte le informazioni che aveva, parlando con lui rischia solo di perdere tempo e in un’indagine il tempo è prezioso"
+Then the menu 1 will be showed
+
+
+
+if a user clicks 2: text: "Chiamare la scientifica ha richiesto tempo ma non abbiamo ottenuto nessuna informazione aggiuntiva.", then menu1
+
+
+
+if a user clicks 3: a video "LILIANA BRUNO VIDEOCALL SALOTTO" starts. At the end of the video Menu2
+
+
+
+if user clicks4: video "MANUEL ORTEGA VIDECALL OFFICINA", then menu2
+
+
+
+at the end of video ORTEGA, screen (background to do) with text: "Come vuoi procedere ora" then menu2 ->
+
+
+
+1 - Chiedi i tabulati telefonici della vittima (se è stato scelto video meccanico)o richiedi la proposta di acquisto (se è stata scelto il video della moglie)
+2 -Interroga moglie
+3- Fai un sopralluogo sulla scena del crimine
+4- Chiedi un consulto al medico legale
+
+
+
+option 1, menu2 -> first minigame
+option2, menu2 -> if at menu 1 the user choose 2, the video of Liliana (moglie) or Ortega (meccanico) starts.
+option 3, menu2 -> screen with text "Fare il sopralluogo ha richiesto tempo ma non abbiamo ottenuto nessuna informazione aggiuntiva"
+
+
+
+at the end of video LILIANA, screen (background to do) with text: "Come vuoi procedere ora" then menu3 ->
+
+
+
+1 - Chiedi i tabulati telefonici della vittima (se è stato scelto video meccanico)o richiedi la proposta di acquisto (se è stata scelto il video della moglie)
+2 -Interroga moglie
+3- Fai un sopralluogo sulla scena del crimine
+4- Chiedi un consulto al medico legale-> : a telephone rings, then a text: "Il commissario chiede se può fare domande aggiuntive, il medico risponde in maniera sgarbata che ha già fornito tutte le informazioni che aveva, parlando con lui rischia solo di perdere tempo e in un’indagine il tempo è prezioso" then menu1
+
+
+
+option 1, menu3 -> second minigame
+option2, menu3 -> if at menu 1 the user choose 2, the video of Liliana (moglie) or Ortega (meccanico) starts.
+option 3, menu3 -> screen with text "Fare il sopralluogo ha richiesto tempo ma non abbiamo ottenuto nessuna informazione aggiuntiva"
+option 4, menu3 -> : a telephone rings, then a text: "Il commissario chiede se può fare domande aggiuntive, il medico risponde in maniera sgarbata che ha già fornito tutte le informazioni che aveva, parlando con lui rischia solo di perdere tempo e in un’indagine il tempo è prezioso" then menu1
+
+
+
+at the end of mini game1, the menu2 has another option "interroga Catena"
+at the end of mini game1, the menu3 has another option "interroga Green"
+
+
+
+Then if you click the new option the "end" screen appears.
