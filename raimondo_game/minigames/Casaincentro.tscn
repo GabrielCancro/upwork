@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/casa_in_centro/content_casaincentro.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/custom_theme.tres" type="Theme" id=2]
 [ext_resource path="res://minigames/Casaincentro.gd" type="Script" id=3]
 [ext_resource path="res://assets/casa_in_centro/logo_casaincentro.png" type="Texture" id=4]
 [ext_resource path="res://assets/phone_records/Roboto-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/sounds/music_minigame.ogg" type="AudioStream" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Logo_shine"
@@ -119,3 +120,8 @@ custom_fonts/font = SubResource( 6 )
 text = "SEARCH"
 flat = true
 expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -15.0
+autoplay = true

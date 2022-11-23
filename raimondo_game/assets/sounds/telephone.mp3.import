@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/telephone.mp3-9141fad943a7c060337622cc0ffad9e4.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/telephone.mp3"
+dest_files=[ "res://.import/telephone.mp3-9141fad943a7c060337622cc0ffad9e4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

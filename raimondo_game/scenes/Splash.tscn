@@ -1,9 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Splash.gd" type="Script" id=1]
 [ext_resource path="res://assets/phone_records/Roboto-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/videos/SIGLA_webm.webm" type="VideoStream" id=3]
+[ext_resource path="res://assets/fonts/KALAM-REGULAR.TTF" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 2 )
 
 [node name="Splash" type="Control"]
@@ -14,8 +20,24 @@ script = ExtResource( 1 )
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+stream = ExtResource( 3 )
+
+[node name="btn_start" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -640.0
+margin_top = -95.5
+margin_right = 640.0
+margin_bottom = 95.5
+custom_fonts/font = SubResource( 1 )
+text = "Pronto a metterti alla prova nei panni di un vero detective? Per iniziare Clicca qui"
+flat = true
+expand_icon = true
 
 [node name="btn_search" type="ColorRect" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -25,14 +47,11 @@ margin_top = -85.0
 margin_right = 599.5
 margin_bottom = -32.0
 color = Color( 0.352941, 0.607843, 0.835294, 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="btn_skip" type="Button" parent="btn_search"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "SALTA"
 flat = true
 expand_icon = true

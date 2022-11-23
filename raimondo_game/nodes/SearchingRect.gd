@@ -55,4 +55,4 @@ func onCloseCardClick():
 	visible = false
 
 func onContactClick():
-	get_tree().change_scene("res://Main.tscn")
+	get_tree().change_scene("res://scenes/Main1.tscn")

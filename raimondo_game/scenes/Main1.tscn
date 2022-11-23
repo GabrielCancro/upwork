@@ -1,0 +1,185 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/fonts/main_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/background.jpg" type="Texture" id=2]
+[ext_resource path="res://scenes/Main1.gd" type="Script" id=3]
+[ext_resource path="res://assets/sounds/telephone.mp3" type="AudioStream" id=4]
+[ext_resource path="res://assets/sounds/music_main.ogg" type="AudioStream" id=5]
+
+[node name="Main1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Options" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -397.0
+margin_top = -177.0
+margin_right = 397.0
+margin_bottom = 177.0
+custom_constants/separation = 30
+
+[node name="btn_option1" type="Button" parent="Options"]
+margin_right = 794.0
+margin_bottom = 66.0
+focus_mode = 0
+custom_colors/font_color_hover = Color( 0.956863, 1, 0.0980392, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Chiedi un consulto al medico legale"
+flat = true
+expand_icon = true
+
+[node name="btn_option2" type="Button" parent="Options"]
+margin_top = 96.0
+margin_right = 794.0
+margin_bottom = 162.0
+focus_mode = 0
+custom_colors/font_color_hover = Color( 0.956863, 1, 0.0980392, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Approfondisci informazioni della polizia Scientifica"
+flat = true
+expand_icon = true
+
+[node name="btn_option3" type="Button" parent="Options"]
+margin_top = 192.0
+margin_right = 794.0
+margin_bottom = 258.0
+focus_mode = 0
+custom_colors/font_color_hover = Color( 0.956863, 1, 0.0980392, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Interroga la moglie"
+flat = true
+expand_icon = true
+
+[node name="btn_option4" type="Button" parent="Options"]
+margin_top = 288.0
+margin_right = 794.0
+margin_bottom = 354.0
+focus_mode = 0
+custom_colors/font_color_hover = Color( 0.956863, 1, 0.0980392, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Interroga el mecánico"
+flat = true
+expand_icon = true
+
+[node name="btn_option5" type="Button" parent="Options"]
+visible = false
+margin_top = 384.0
+margin_right = 794.0
+margin_bottom = 450.0
+focus_mode = 0
+custom_colors/font_color_hover = Color( 0.956863, 1, 0.0980392, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Fai un sopralluogo sulla scena del crimine"
+flat = true
+expand_icon = true
+
+[node name="Option1" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="sfx" type="AudioStreamPlayer" parent="Option1"]
+stream = ExtResource( 4 )
+
+[node name="btn_back" type="Button" parent="Option1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -469.5
+margin_top = -155.0
+margin_right = 469.5
+margin_bottom = 155.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="Option1/btn_back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/line_spacing = -11
+custom_fonts/font = ExtResource( 1 )
+text = "Il commissario chiede se può fare domande aggiuntive, il medico risponde in maniera sgarbata che ha già fornito tutte le informazioni che aveva, parlando con lui rischia solo di perdere tempo e in un'indagine il tempo è prezioso"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Option2" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="btn_back" type="Button" parent="Option2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -469.5
+margin_top = -155.0
+margin_right = 469.5
+margin_bottom = 155.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="Option2/btn_back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/line_spacing = -11
+custom_fonts/font = ExtResource( 1 )
+text = "Chiamare la Scientifica ha richiesto tempo ma non abbiamo ottenuto nessuna informazione aggiuntiva."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Option5" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="btn_back" type="Button" parent="Option5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -469.5
+margin_top = -155.0
+margin_right = 469.5
+margin_bottom = 155.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="Option5/btn_back"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -469.5
+margin_top = -98.5
+margin_right = 469.5
+margin_bottom = 98.5
+custom_constants/line_spacing = -11
+custom_fonts/font = ExtResource( 1 )
+text = "Fare il sopralluogo ha richiesto tempo ma non abbiamo ottenuto nessuna informazione aggiuntiva"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -15.0
+autoplay = true
