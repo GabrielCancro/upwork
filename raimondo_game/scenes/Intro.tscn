@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/videos/Presentazione caso.oggtheora.ogv" type="VideoStream" id=1]
+[ext_resource path="res://assets/videos/Presentazione caso.webm" type="VideoStream" id=1]
 [ext_resource path="res://scenes/Intro.gd" type="Script" id=2]
 [ext_resource path="res://assets/phone_records/Roboto-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/fonts/KALAM-REGULAR.TTF" type="DynamicFontData" id=4]

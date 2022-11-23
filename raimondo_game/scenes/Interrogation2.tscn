@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/videos/MANUEL ORTEGA VIDECALL OFFICINA.oggtheora.ogv" type="VideoStream" id=1]
+[ext_resource path="res://assets/videos/MANUEL ORTEGA VIDECALL OFFICINA.webm" type="VideoStream" id=1]
 [ext_resource path="res://assets/phone_records/Roboto-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scenes/Interrogation2.gd" type="Script" id=3]
 
