@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/Splash.gd" type="Script" id=1]
 [ext_resource path="res://assets/phone_records/Roboto-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/videos/SIGLA_webm.webm" type="VideoStream" id=3]
 [ext_resource path="res://assets/fonts/KALAM-REGULAR.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/background1.png" type="Texture" id=5]
+[ext_resource path="res://assets/fonts/main_font.tres" type="DynamicFont" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -22,19 +24,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 stream = ExtResource( 3 )
 
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+
 [node name="btn_start" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -640.0
-margin_top = -95.5
-margin_right = 640.0
-margin_bottom = 95.5
+margin_left = -586.0
+margin_top = -275.0
+margin_right = 275.0
+margin_bottom = 273.0
 custom_fonts/font = SubResource( 1 )
-text = "Pronto a metterti alla prova nei panni di un vero detective? Per iniziare Clicca qui"
 flat = true
 expand_icon = true
+
+[node name="Label" type="Label" parent="btn_start"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 141.0
+custom_colors/font_color = Color( 1, 0.211765, 0.211765, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "Pronto a metterti alla prova 
+nei panni di un vero detective?
+
+
+
+
+Per iniziare Clicca qui"
+valign = 1
+autowrap = true
 
 [node name="btn_search" type="ColorRect" parent="."]
 visible = false

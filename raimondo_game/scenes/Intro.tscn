@@ -31,6 +31,7 @@ margin_left = -640.0
 margin_top = -95.5
 margin_right = 640.0
 margin_bottom = 95.5
+focus_mode = 0
 custom_fonts/font = SubResource( 2 )
 text = "Avvia la presentazione del caso da risolvere"
 flat = true
@@ -53,5 +54,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 custom_fonts/font = SubResource( 1 )
 text = "SALTA"
+flat = true
+expand_icon = true
+
+[node name="btn_replay" type="ColorRect" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 304.5
+margin_top = -85.0
+margin_right = 447.5
+margin_bottom = -32.0
+color = Color( 0.352941, 0.607843, 0.835294, 1 )
+
+[node name="btn" type="Button" parent="btn_replay"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "RIGIOCARE"
 flat = true
 expand_icon = true

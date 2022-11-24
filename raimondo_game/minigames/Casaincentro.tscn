@@ -5,7 +5,7 @@
 [ext_resource path="res://minigames/Casaincentro.gd" type="Script" id=3]
 [ext_resource path="res://assets/casa_in_centro/logo_casaincentro.png" type="Texture" id=4]
 [ext_resource path="res://assets/phone_records/Roboto-Regular.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://assets/sounds/music_minigame.ogg" type="AudioStream" id=6]
+[ext_resource path="res://nodes/QuitPanel.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Logo_shine"
@@ -121,7 +121,5 @@ text = "SEARCH"
 flat = true
 expand_icon = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-volume_db = -15.0
-autoplay = true
+[node name="QuitPanel" parent="." instance=ExtResource( 6 )]
+Message = 1

@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/phone_records/Roboto-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/phone_records/codice_alfa.jpg" type="Texture" id=7]
 [ext_resource path="res://assets/phone_records/dati_traffico.jpg" type="Texture" id=8]
-[ext_resource path="res://assets/sounds/music_minigame.ogg" type="AudioStream" id=9]
+[ext_resource path="res://nodes/QuitPanel.tscn" type="PackedScene" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 outline_color = Color( 0, 0, 0, 1 )
@@ -1479,7 +1479,5 @@ texture = ExtResource( 3 )
 expand = true
 stretch_mode = 6
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
-volume_db = -15.0
-autoplay = true
+[node name="QuitPanel" parent="." instance=ExtResource( 9 )]
+Message = 1

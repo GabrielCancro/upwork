@@ -23,6 +23,10 @@ func transitionIn():
 	check_effector_nodes()
 	TransitionEffector.fadeOut()
 
+func transitionInSlow():
+	check_effector_nodes()
+	TransitionEffector.fadeOut(1)
+
 func transitionOut():
 	check_effector_nodes()
 	TransitionEffector.fadeIn()

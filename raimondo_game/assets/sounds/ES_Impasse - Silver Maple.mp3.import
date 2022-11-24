@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Impasse - Silver Maple.mp3-f1786cd98ccef0a7afb2bbed60d68a55.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/ES_Impasse - Silver Maple.mp3"
+dest_files=[ "res://.import/ES_Impasse - Silver Maple.mp3-f1786cd98ccef0a7afb2bbed60d68a55.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

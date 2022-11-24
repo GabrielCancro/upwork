@@ -7,6 +7,9 @@ func _ready():
 	$Options/btn_option4.connect("button_down",self,"onOptionClick_4")
 	$Options/btn_option5.connect("button_down",self,"onOptionClick_5")
 	Effector.transitionIn()
+	GlobalMusic.playing = true
+	
+	$QuitPanel.connect("closed_panel",self,"onQuitPanel")
 	
 	$Option1/btn_back.connect("button_down",self,"onBackClick")
 	$Option2/btn_back.connect("button_down",self,"onBackClick")
@@ -56,3 +59,6 @@ func onBackClick():
 	Effector.fadeOutNode($Option5)
 	yield(Effector,"end_effect")
 	Effector.fadeInNode($Options)
+
+func onQuitPanel(val):
+	if val=="YES": get_tree().quit()

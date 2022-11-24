@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/main_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://nodes/QuitPanel.gd" type="Script" id=2]
+
+[node name="QuitPanel" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 2 )
+
+[node name="Panel" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.109375, 0.109375, 0.109375, 0.784314 )
+
+[node name="SubPanel" type="ColorRect" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 326.0
+margin_top = 186.0
+margin_right = -294.0
+margin_bottom = -311.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="Panel/SubPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -79.0
+custom_constants/line_spacing = -11
+custom_fonts/font = ExtResource( 1 )
+text = "vuoi tornare al gioco principale?"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="btn_yes" type="Button" parent="Panel/SubPanel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -66.0
+margin_right = -328.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.956863, 1, 0.0980392, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "sì"
+flat = true
+icon_align = 1
+expand_icon = true
+
+[node name="btn_no" type="Button" parent="Panel/SubPanel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 330.0
+margin_top = -66.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.956863, 1, 0.0980392, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "no"
+flat = true
+icon_align = 1
+expand_icon = true
+
+[node name="btn_quit" type="Button" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -108.0
+margin_bottom = 84.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 0.588235 )
+custom_colors/font_color_hover = Color( 0.956863, 1, 0.0980392, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "X"
+flat = true
+icon_align = 1
+expand_icon = true

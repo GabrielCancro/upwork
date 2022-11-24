@@ -4,10 +4,13 @@ func _ready():
 	$VideoPlayer.connect("finished",self,"onFinishedVideo")
 	$btn_search/btn_skip.connect("button_down",self,"onFinishedVideo")
 	$btn_start.connect("button_down",self,"onStartClick")
-	Effector.transitionIn()
+	Effector.transitionInSlow()
+	GlobalMusic.playing = true
 
 func onStartClick():
 	$btn_start.visible = false
+	GlobalMusic.playing = false
+	Effector.fadeOutNode($Background)
 	$VideoPlayer.play()
 	showSkipButton()
 

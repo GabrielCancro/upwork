@@ -28,6 +28,7 @@ var CARDS = {
 var CORRECT_NAME = "CRISTIANOCATENA"
 
 signal on_close_card
+signal on_contact_person(value)
 
 func _ready():
 	$ResultCard/btn_close_card.connect("button_down",self,"onCloseCardClick")
@@ -55,4 +56,4 @@ func onCloseCardClick():
 	visible = false
 
 func onContactClick():
-	get_tree().change_scene("res://scenes/Main1.tscn")
+	emit_signal("on_contact_person",CORRECT_NAME)
